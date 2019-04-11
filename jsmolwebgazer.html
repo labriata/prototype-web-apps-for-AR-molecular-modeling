@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html><head>
+        <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+        <title>Eye tracking on JSmol</title>
+        <script type="text/javascript" src="jsmolwebgazer_files/JSmol.js"></script>
+        <script type="text/javascript">
+           Jmol._isAsync = false;
+           Jmol.getProfile() // records repeat calls to overridden or overloaded Java methods
+
+           var jmolApplet0; // set up with insertJSmol function below
+
+           function insertJSmol() {
+              $("#JSmolEnvelope").html(Jmol.getAppletHtml("jmolApplet0", Info0));
+           }
+
+           jmol_isReady = function(applet) {
+            Jmol._getElement(applet, "appletdiv").style.border="5px solid brown"
+           }
+
+          Info0 = {
+            width: 800,
+            height: 600,
+            debug: false,
+            color: "#FFFFFF",
+            zIndexBase: 20000,
+            z:{monitorZIndex:100},
+            use: "HTML5",
+            j2sPath: "../../3dviewer/j2s",
+            disableJ2SLoadMonitor: false,
+            disableInitialConsole: false,
+            readyFunction: jmol_isReady,
+            allowjavascript: true,
+    		script: "set antialiasDisplay;background white;load 1ubq.pdb; zoom 100; wireframe 100; spacefill off; cartoon on; spin off; refresh; select (arg,lys); color blue; select (asp,glu); color red; select (cys,asn,gln,ser,thr,his,tyr); color green; select (ala,trp,ile,leu,met,pro,val,phe); color gray; select (pro); color black; spacefill 100; selectionHalos on; timeout 't1' -100 \'select all; label off; select on *.ca and within(8,sz = @{all.sz.min}); label %n%R; font label 18; color label black'"
+            //atomlist = [\"C10\",\"C12\",\"N3\",\"N6\"]; function checkOrient() {    ptcenter = {*}.xyz;    q = quaternion();    asort = [];    for (var i = 1; i <= atomlist.length; i++) {        var a = atomlist[i];        var pt = {atomName=a}.xyz - ptcenter;        asort[i] = [a, (q%pt).z];    };    asort = asort.sort(2);     var frontAtom = (asort[0])[1];     select {atomName=frontatom}; }; selectionHalos on; timeout \"t1\" -100 \"checkOrient()\""
+           }
+        </script>
+	</head>
+    
+    <body dir="LTR" link="#0000ff" lang="en-US"><!-- BEGIN AV_TOOLBAR -->
+        <div id="av_toolbar_regdiv">
+        <div class="av_site"><a target="_blank" href="https://it.altervista.org/crea-sito-gratis.php?utm_campaign=toolbar&amp;utm_source=link&amp;utm_medium=link" title="Siti, blog e web hosting gratis">Crea sito</a></div>
+        </div>
+        <script type="text/javascript">
+        /*
+        (function(d, s) {
+            var fjs = d.getElementsByTagName(s)[0], js = d.createElement(s);
+            js.src = "//tb.altervista.org/js/script.js?1";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script'));
+        */
+        </script>
+        <!-- END AV_TOOLBAR -->
+
+        <script src="jsmolwebgazer_files/webgazer-5.js"></script><canvas width="11px" height="781px" id="renderCanvas" style="display:none;"></canvas>
+        <!--script src="https://webgazer.cs.brown.edu/webgazer.js"></script-->
+        <script>
+            var trackX=0
+            var trackY=0
+            var trackmenos1X=0
+            var trackmenos1Y=0
+
+            $(document).ready(function(){
+
+            webgazer.setRegression('ridge') /* currently must set regression and tracker */
+                .setTracker('clmtrackr')
+                .setGazeListener(function(data, clock) {
+                    if (!data)
+                       return
+                    //console.log(data.x); /* data is an object containing an x and y key which are the x and y prediction coordinates (no bounds limiting) */
+                    trackmenos2X = trackmenos1X;
+                    trackmenos2Y = trackmenos1Y;
+                    trackmenos1X = trackX;
+                    trackmenos1Y = trackY;
+                    trackX = data.x;
+                    trackY = data.y;
+
+					avgx=(trackX+trackmenos1X+trackmenos2X)/3;
+                    avgy=(trackY+trackmenos1Y+trackmenos2Y)/3;
+//                    console.log(avgx);
+                    if (avgx-730 > 10) {
+                        Jmol.script(jmolApplet0,"rotate y -2")
+                    }
+                    if (avgx-730 < -10) {
+                        Jmol.script(jmolApplet0,"rotate y 2")
+                    }
+                    if (avgy-370 > 10) {
+                        Jmol.script(jmolApplet0,"rotate x -2")
+                    }
+                    if (avgy-370 < -10) {
+                        Jmol.script(jmolApplet0,"rotate x 2")
+                    }
+
+                 //   console.log(clock); /* elapsed time in milliseconds since webgazer.begin() was called */
+                })
+                .begin()
+                .showPredictionPoints(true); /* shows a square every 100 milliseconds where current prediction is */
+
+            var width = 320;
+            var height = 240;
+            var topDist = '0px';
+            var leftDist = '0px';
+
+            var setup = function() {
+                var video = document.getElementById('webgazerVideoFeed');
+                video.style.display = 'block';
+                video.style.position = 'absolute';
+                video.style.top = topDist;
+                video.style.left = leftDist;
+                video.width = width;
+                video.height = height;
+                video.style.margin = '0px';
+
+                webgazer.params.imgWidth = width;
+                webgazer.params.imgHeight = height;
+
+                var overlay = document.createElement('canvas');
+                overlay.id = 'overlay';
+                overlay.style.position = 'absolute';
+                overlay.width = width;
+                overlay.height = height;
+                overlay.style.top = topDist;
+                overlay.style.left = leftDist;
+                overlay.style.margin = '0px';
+
+                document.body.appendChild(overlay);
+
+                var cl = webgazer.getTracker().clm;
+
+                function drawLoop() {
+                    requestAnimFrame(drawLoop);
+                    overlay.getContext('2d').clearRect(0,0,width,height);
+                    if (cl.getCurrentPosition()) {
+                        cl.draw(overlay);
+                    }
+                }
+                drawLoop();
+            };
+
+            function checkIfReady() {
+                if (webgazer.isReady()) {
+                    setup();
+                    insertJSmol();  // to be sure JSmol is loaded only once WebGazer is running
+                } else {
+                    setTimeout(checkIfReady, 1000);
+                }
+            }
+            setTimeout(checkIfReady,1000);
+        });
+
+        window.onbeforeunload = function() {
+            //webgazer.end(); //Uncomment if you want to save the data even if you reload the page.
+            window.localStorage.clear(); //Comment out if you want to save data across different sessions 
+        }
+        </script>
+
+        <div id="mydiv">
+          <table>
+            <tbody><tr>
+              <td width="320">Video input.<p><br><b>How to:</b> Make 
+sure your facial features (eyebrows, eyes, pupils, nose, lips...) are 
+correctly fit to the webcam feed. Then follow your mouse with your eyes 
+as you click on different parts of the screen. This will continuously 
+calibrate the system; then, moving just your eyes should rotate the 
+molecule in real time trying to always bring to the front those residues
+ you are looking at, and labeling them.</p></td>
+              <td id="JSmolEnvelope" width="900"> 
+                <p>
+              </p></td>
+            </tr>
+          </tbody></table>
+        </div>
+        <p>
+        <b>Instructions:</b> First click on a few locations within the 
+screen while looking purposefully at the cursor. (Both clicks and cursor
+ movements make the predictions more accurate.) Then move your eyes 
+around the screen; if well calibrated, the atoms you look at should come
+ to the front. Keep calibrating if you, the screen or light sources move
+ or change.
+        </p><h3>This app displays a structure of ubiquitin (PDB ID 1UBQ, colored by amino acid type) with <a href="https://sourceforge.net/projects/jsmol/" target="_blank">JSmol</a> and controls it through webcam-based eye tracking with <a href="http://webgazer.cs.brown.edu/" target="_blank">WebGazer</a> (modified slightly by <a href="http://biomodel.uah.es/personal/inicio.htm">Angel Herraez</a> for compatibility).
+
+        <p><br></p><p><br></p><p><br></p><p><br>
+
+        </p><p><a title="Visit tracker" href="https://clustrmaps.com/site/16ven"><img src="jsmolwebgazer_files/map_v2.png" alt="" width="1%" height="1%"></a></p>
+    
+
+</h3><canvas width="11px" height="781px" id="renderCanvas" style="display:none;"></canvas><video id="webgazerVideoFeed" autoplay="autoplay" style="display: block; position: fixed; top: 0px; left: 0px; width: 320px; height: 240px;"></video><canvas id="webgazerVideoCanvas" style="display: none;" width="0" height="0"></canvas><canvas id="webgazerFaceOverlay" style="display: block; position: fixed; top: 0px; left: 0px; width: 320px; height: 240px;" width="0" height="0"></canvas><canvas id="webgazerFaceFeedbackBox" style="display: block; position: fixed; border: medium solid black;"></canvas><div id="webgazerGazeDot" style="display: block; position: fixed; z-index: 99999; left: -5px; top: -5px; background: red none repeat scroll 0% 0%; border-radius: 100%; opacity: 0.7; width: 10px; height: 10px;"></div></body></html>

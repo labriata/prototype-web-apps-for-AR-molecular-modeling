@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!--script src="../aframe.min.js"></script-->
+<!--script src="../aframe-ar.js"></script-->
+<html class=""><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><meta aframe-injected="" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui"><meta aframe-injected="" name="mobile-web-app-capable" content="yes"><meta aframe-injected="" name="theme-color" content="black"><script src="Ubiquitin_UIMdocking_files/aframe.js"></script><style type="text/css" data-href="src\style\aframe.css">.a-html{bottom:0;left:0;position:fixed;right:0;top:0}.a-body{height:100%;margin:0;overflow:hidden;padding:0;width:100%}:-webkit-full-screen{background-color:transparent}.a-hidden{display:none!important}.a-canvas{height:100%;left:0;position:absolute;top:0;width:100%}.a-canvas.a-grab-cursor:hover{cursor:grab;cursor:-moz-grab;cursor:-webkit-grab}.a-canvas.a-grab-cursor:active,.a-grabbing{cursor:grabbing;cursor:-moz-grabbing;cursor:-webkit-grabbing}// Class is removed when doing <a-scene embedded>. a-scene.fullscreen .a-canvas{width:100%!important;height:100%!important;top:0!important;left:0!important;right:0!important;bottom:0!important;z-index:999999!important;position:fixed!important}.a-inspector-loader{background-color:#ed3160;position:fixed;left:3px;top:3px;padding:6px 10px;color:#fff;text-decoration:none;font-size:12px;font-family:Roboto,sans-serif;text-align:center;z-index:99999;width:204px}@keyframes dots-1{from{opacity:0}25%{opacity:1}}@keyframes dots-2{from{opacity:0}50%{opacity:1}}@keyframes dots-3{from{opacity:0}75%{opacity:1}}@-webkit-keyframes dots-1{from{opacity:0}25%{opacity:1}}@-webkit-keyframes dots-2{from{opacity:0}50%{opacity:1}}@-webkit-keyframes dots-3{from{opacity:0}75%{opacity:1}}.a-inspector-loader .dots span{animation:dots-1 2s infinite steps(1);-webkit-animation:dots-1 2s infinite steps(1)}.a-inspector-loader .dots span:first-child+span{animation-name:dots-2;-webkit-animation-name:dots-2}.a-inspector-loader .dots span:first-child+span+span{animation-name:dots-3;-webkit-animation-name:dots-3}a-scene{display:block;position:relative;height:100%;width:100%}a-assets,a-scene audio,a-scene img,a-scene video{display:none}.a-enter-vr-modal,.a-orientation-modal{font-family:Consolas,Andale Mono,Courier New,monospace}.a-enter-vr-modal a{border-bottom:1px solid #fff;padding:2px 0;text-decoration:none;transition:.1s color ease-in}.a-enter-vr-modal a:hover{background-color:#fff;color:#111;padding:2px 4px;position:relative;left:-4px}.a-enter-vr{font-family:sans-serif,monospace;font-size:13px;width:100%;font-weight:200;line-height:16px;position:absolute;right:20px;bottom:20px}.a-enter-vr.embedded{right:5px;bottom:5px}.a-enter-vr-button,.a-enter-vr-modal,.a-enter-vr-modal a{color:#fff}.a-enter-vr-button{background:url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20245.82%20141.73%22%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill%3A%23fff%3Bfill-rule%3Aevenodd%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Ctitle%3Emask%3C%2Ftitle%3E%3Cpath%20class%3D%22a%22%20d%3D%22M175.56%2C111.37c-22.52%2C0-40.77-18.84-40.77-42.07S153%2C27.24%2C175.56%2C27.24s40.77%2C18.84%2C40.77%2C42.07S198.08%2C111.37%2C175.56%2C111.37ZM26.84%2C69.31c0-23.23%2C18.25-42.07%2C40.77-42.07s40.77%2C18.84%2C40.77%2C42.07-18.26%2C42.07-40.77%2C42.07S26.84%2C92.54%2C26.84%2C69.31ZM27.27%2C0C11.54%2C0%2C0%2C12.34%2C0%2C28.58V110.9c0%2C16.24%2C11.54%2C30.83%2C27.27%2C30.83H99.57c2.17%2C0%2C4.19-1.83%2C5.4-3.7L116.47%2C118a8%2C8%2C0%2C0%2C1%2C12.52-.18l11.51%2C20.34c1.2%2C1.86%2C3.22%2C3.61%2C5.39%2C3.61h72.29c15.74%2C0%2C27.63-14.6%2C27.63-30.83V28.58C245.82%2C12.34%2C233.93%2C0%2C218.19%2C0H27.27Z%22%2F%3E%3C%2Fsvg%3E) 50% 50%/70% 70% no-repeat rgba(0,0,0,.35);border:0;bottom:0;cursor:pointer;min-width:50px;min-height:30px;padding-right:5%;padding-top:4%;position:absolute;right:0;transition:background-color .05s ease;-webkit-transition:background-color .05s ease;z-index:9999}.a-enter-vr-button:active,.a-enter-vr-button:hover{background-color:#666}[data-a-enter-vr-no-webvr] .a-enter-vr-button{border-color:#666;opacity:.65}[data-a-enter-vr-no-webvr] .a-enter-vr-button:active,[data-a-enter-vr-no-webvr] .a-enter-vr-button:hover{background-color:rgba(0,0,0,.35);cursor:not-allowed}.a-enter-vr-modal{background-color:#666;border-radius:0;display:none;min-height:32px;margin-right:70px;padding:9px;width:280px;right:2%;position:absolute}.a-enter-vr-modal:after{border-bottom:10px solid transparent;border-left:10px solid #666;border-top:10px solid transparent;display:inline-block;content:'';position:absolute;right:-5px;top:5px;width:0;height:0}.a-enter-vr-modal a,.a-enter-vr-modal p{display:inline}.a-enter-vr-modal p{margin:0}.a-enter-vr-modal p:after{content:' '}[data-a-enter-vr-no-headset].a-enter-vr:hover .a-enter-vr-modal,[data-a-enter-vr-no-webvr].a-enter-vr:hover .a-enter-vr-modal{display:block}.a-orientation-modal{background:url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20version%3D%221.1%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2090%2090%22%20enable-background%3D%22new%200%200%2090%2090%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C0%200%2C0%200%2C0%20%22%3E%3C/polygon%3E%3Cg%3E%3Cpath%20d%3D%22M71.545%2C48.145h-31.98V20.743c0-2.627-2.138-4.765-4.765-4.765H18.456c-2.628%2C0-4.767%2C2.138-4.767%2C4.765v42.789%20%20%20c0%2C2.628%2C2.138%2C4.766%2C4.767%2C4.766h5.535v0.959c0%2C2.628%2C2.138%2C4.765%2C4.766%2C4.765h42.788c2.628%2C0%2C4.766-2.137%2C4.766-4.765V52.914%20%20%20C76.311%2C50.284%2C74.173%2C48.145%2C71.545%2C48.145z%20M18.455%2C16.935h16.344c2.1%2C0%2C3.808%2C1.708%2C3.808%2C3.808v27.401H37.25V22.636%20%20%20c0-0.264-0.215-0.478-0.479-0.478H16.482c-0.264%2C0-0.479%2C0.214-0.479%2C0.478v36.585c0%2C0.264%2C0.215%2C0.478%2C0.479%2C0.478h7.507v7.644%20%20%20h-5.534c-2.101%2C0-3.81-1.709-3.81-3.81V20.743C14.645%2C18.643%2C16.354%2C16.935%2C18.455%2C16.935z%20M16.96%2C23.116h19.331v25.031h-7.535%20%20%20c-2.628%2C0-4.766%2C2.139-4.766%2C4.768v5.828h-7.03V23.116z%20M71.545%2C73.064H28.757c-2.101%2C0-3.81-1.708-3.81-3.808V52.914%20%20%20c0-2.102%2C1.709-3.812%2C3.81-3.812h42.788c2.1%2C0%2C3.809%2C1.71%2C3.809%2C3.812v16.343C75.354%2C71.356%2C73.645%2C73.064%2C71.545%2C73.064z%22%3E%3C/path%3E%3Cpath%20d%3D%22M28.919%2C58.424c-1.466%2C0-2.659%2C1.193-2.659%2C2.66c0%2C1.466%2C1.193%2C2.658%2C2.659%2C2.658c1.468%2C0%2C2.662-1.192%2C2.662-2.658%20%20%20C31.581%2C59.617%2C30.387%2C58.424%2C28.919%2C58.424z%20M28.919%2C62.786c-0.939%2C0-1.703-0.764-1.703-1.702c0-0.939%2C0.764-1.704%2C1.703-1.704%20%20%20c0.94%2C0%2C1.705%2C0.765%2C1.705%2C1.704C30.623%2C62.022%2C29.858%2C62.786%2C28.919%2C62.786z%22%3E%3C/path%3E%3Cpath%20d%3D%22M69.654%2C50.461H33.069c-0.264%2C0-0.479%2C0.215-0.479%2C0.479v20.288c0%2C0.264%2C0.215%2C0.478%2C0.479%2C0.478h36.585%20%20%20c0.263%2C0%2C0.477-0.214%2C0.477-0.478V50.939C70.131%2C50.676%2C69.917%2C50.461%2C69.654%2C50.461z%20M69.174%2C51.417V70.75H33.548V51.417H69.174z%22%3E%3C/path%3E%3Cpath%20d%3D%22M45.201%2C30.296c6.651%2C0%2C12.233%2C5.351%2C12.551%2C11.977l-3.033-2.638c-0.193-0.165-0.507-0.142-0.675%2C0.048%20%20%20c-0.174%2C0.198-0.153%2C0.501%2C0.045%2C0.676l3.883%2C3.375c0.09%2C0.075%2C0.198%2C0.115%2C0.312%2C0.115c0.141%2C0%2C0.273-0.061%2C0.362-0.166%20%20%20l3.371-3.877c0.173-0.2%2C0.151-0.502-0.047-0.675c-0.194-0.166-0.508-0.144-0.676%2C0.048l-2.592%2C2.979%20%20%20c-0.18-3.417-1.629-6.605-4.099-9.001c-2.538-2.461-5.877-3.817-9.404-3.817c-0.264%2C0-0.479%2C0.215-0.479%2C0.479%20%20%20C44.72%2C30.083%2C44.936%2C30.296%2C45.201%2C30.296z%22%3E%3C/path%3E%3C/g%3E%3C/svg%3E) center/50% 50% no-repeat rgba(244,244,244,1);bottom:0;font-size:14px;font-weight:600;left:0;line-height:20px;right:0;position:fixed;top:0;z-index:9999999}.a-orientation-modal:after{color:#666;content:"Insert phone into Cardboard holder.";display:block;position:absolute;text-align:center;top:70%;transform:translateY(-70%);width:100%}.a-orientation-modal button{background:url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20version%3D%221.1%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%20100%22%20enable-background%3D%22new%200%200%20100%20100%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M55.209%2C50l17.803-17.803c1.416-1.416%2C1.416-3.713%2C0-5.129c-1.416-1.417-3.713-1.417-5.129%2C0L50.08%2C44.872%20%20L32.278%2C27.069c-1.416-1.417-3.714-1.417-5.129%2C0c-1.417%2C1.416-1.417%2C3.713%2C0%2C5.129L44.951%2C50L27.149%2C67.803%20%20c-1.417%2C1.416-1.417%2C3.713%2C0%2C5.129c0.708%2C0.708%2C1.636%2C1.062%2C2.564%2C1.062c0.928%2C0%2C1.856-0.354%2C2.564-1.062L50.08%2C55.13l17.803%2C17.802%20%20c0.708%2C0.708%2C1.637%2C1.062%2C2.564%2C1.062s1.856-0.354%2C2.564-1.062c1.416-1.416%2C1.416-3.713%2C0-5.129L55.209%2C50z%22%3E%3C/path%3E%3C/svg%3E) no-repeat;border:none;height:50px;text-indent:-9999px;width:50px}</style><style type="text/css" data-href="src\style\rStats.css">.rs-base{background-color:#333;color:#fafafa;border-radius:0;font:10px monospace;left:5px;line-height:1em;opacity:.85;overflow:hidden;padding:10px;position:fixed;top:5px;width:300px;z-index:10000}.rs-base div.hidden{display:none}.rs-base h1{color:#fff;cursor:pointer;font-size:1.4em;font-weight:300;margin:0 0 5px;padding:0}.rs-group{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-flex-direction:column-reverse;flex-direction:column-reverse;margin-bottom:5px}.rs-group:last-child{margin-bottom:0}.rs-counter-base{align-items:center;display:-webkit-box;display:-webkit-flex;display:flex;height:10px;-webkit-justify-content:space-between;justify-content:space-between;margin:2px 0}.rs-counter-base.alarm{color:#b70000;text-shadow:0 0 0 #b70000,0 0 1px #fff,0 0 1px #fff,0 0 2px #fff,0 0 2px #fff,0 0 3px #fff,0 0 3px #fff,0 0 4px #fff,0 0 4px #fff}.rs-counter-id{font-weight:300;-webkit-box-ordinal-group:0;-webkit-order:0;order:0;width:54px}.rs-counter-value{font-weight:300;-webkit-box-ordinal-group:1;-webkit-order:1;order:1;text-align:right;width:35px}.rs-canvas{-webkit-box-ordinal-group:2;-webkit-order:2;order:2}@media (min-width:480px){.rs-base{left:20px;top:20px}}</style>
+<script src="Ubiquitin_UIMdocking_files/aframe-ar.js"> </script>
+
+<script src="Ubiquitin_UIMdocking_files/client.js"></script>
+<script src="Ubiquitin_UIMdocking_files/aframe-extras.js"></script>
+
+<script type="text/javascript" src="Ubiquitin_UIMdocking_files/loader.js"></script>
+    
+<script src="Ubiquitin_UIMdocking_files/annyang.js"></script>
+
+
+<title>Ubiquitin - UIM docking</title></head>
+<body style="margin-right: 0px; margin-bottom: 0px; margin-left: 0px; overflow: hidden; font-family: monospace; width: 1525px; height: 480px;" class="">
+<style>
+  canvas  {	-moz-transform: scale(-1, 1);	-webkit-transform: scale(-1, 1);	-o-transform: scale(-1, 1);	-ms-transform: scale(-1, 1);	transform: scale(-1, 1);  }
+  video  {	-moz-transform: scale(-1, 1);	-webkit-transform: scale(-1, 1);	-o-transform: scale(-1, 1);	-ms-transform: scale(-1, 1);	transform: scale(-1, 1);  }
+</style>
+
+<div style="position: fixed; top: 10px; width:inherit; text-align: center; z-index: 1; background-color: rgba(255, 255, 255, 0.6);">
+  <font size="4">
+  <p align="left"><a href="https://clustrmaps.com/site/16ven" title="Visit tracker" target="_blank"><img src="Ubiquitin_UIMdocking_files/map_v2.png" alt="" width="1%" height="1%"></a>
+  <b>VOICE COMMANDS: 'Computer...', 'Activate forcefield', 'Stop forcefield', 'Activate restraints', 'Show plots'<br>'Stop restraints', 'Show restraints', 'Hide restraints', 'Restart'</b></p>
+  </font>
+  <font size="4" color="red"><p id="infop" align="left"><p align="left">Ile45-Ala266 distance: 8.975832030235798 &#8491;<br></p></p></font>
+</div>
+<div style="position: fixed; top: 0px; right:0px; width:400; text-align: right; z-index: 1; background-color: rgba(255, 255, 255, 0);">
+  <font size="4">
+  <p align="right"><a href="" target="_blank"><b>[Open in new window]</b></a><br><a href="https://lucianoabriata.altervista.org/jsinscience/arjs/armodeling/markers.docx" download="">Get markers</a></p>
+  </font>
+  <h2>CLICK SCREEN TO START <br> AND CHECK YOUR AD BLOCKER</h2>
+</div>
+
+<div id="saxsdiv" style="visibility:hidden; position: fixed; top: 100px; right:10px; width:300px; text-align: center; z-index: 2; background-color: rgba(255, 255, 255, 1);">
+    <p id="saxserrorid">SAXS error = <br>
+	</p><div id="chart_div" style="width: 300px; height: 300px;"></div>
+</div>
+
+	<a-scene embedded="" artoolkit="sourceType: webcam;" id="thescene" class="" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+		<!-- handle hiro marker-->
+		<a-marker preset="hiro" id="uimmarker" position="" rotation="" scale="" visible="" material="" arjs-anchor="" arjs-hit-testing="">
+          <!--<a-text value="Hello, Worldsssssssssssssssssssssssssssssssssss!"></a-text>-->
+			<a-tube id="uimtube" path="-1.774487518 2.098137167 3.140029453,-1.079487518 1.808137167 3.035229453,-1.320887518 1.394537167 2.441829453,-1.547287518 2.010337167 2.049429453,-0.889487518 2.366937167 2.196829453,-0.492687518 1.757337167 1.969629453,-0.892487518 1.711737167 1.327829453,-0.745287518 2.443137167 1.186629453,-0.003887518 2.340937167 1.344229453,0.026312482 1.741937167 0.871229453,-0.341287518 2.115537167 0.314429453,0.155112482 2.691937167 0.376429453,0.768512482 2.235737167 0.396029453,0.507912482 1.880337167 -0.216170547,0.373112482 2.531537167 -0.580170547,1.041712482 2.830337167 -0.402770547,1.404912482 2.227537167 -0.707970547,1.056312482 2.123937167 -1.379370547" radius="0.1" material="color: blue" position="" rotation="" scale="" visible="" tube=""></a-tube>
+<a-sphere id="uim257" position=" -1.774487518 2.098137167 3.140029453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim258" position=" -1.079487518 1.808137167 3.035229453 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim259" position=" -1.320887518 1.394537167 2.441829453 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim260" position=" -1.547287518 2.010337167 2.049429453 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim261" position=" -0.889487518 2.366937167 2.196829453 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim262" position=" -0.492687518 1.757337167 1.969629453 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim263" position=" -0.892487518 1.711737167 1.327829453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim264" position=" -0.745287518 2.443137167 1.186629453 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim265" position=" -0.003887518 2.340937167 1.344229453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim266" position=" 0.026312482 1.741937167 0.871229453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim267" position=" -0.341287518 2.115537167 0.314429453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim268" position=" 0.155112482 2.691937167 0.376429453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim269" position=" 0.768512482 2.235737167 0.396029453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim270" position=" 0.507912482 1.880337167 -0.216170547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim271" position=" 0.373112482 2.531537167 -0.580170547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim272" position=" 1.041712482 2.830337167 -0.402770547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim273" position=" 1.404912482 2.227537167 -0.707970547 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="uim274" position=" 1.056312482 2.123937167 -1.379370547 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+		</a-marker>
+		
+		<!-- handle kanji marker -->
+		<a-marker preset="kanji" id="ubimarker" position="" rotation="" scale="" visible="" material="" arjs-anchor="" arjs-hit-testing="">
+            <a-tube path="1.763912482 -1.429062833 -2.017970547,1.930912482 -1.113462833 -1.349970547,1.516312482 -0.566062833 -1.021370547,1.621712482 -0.235262833 -0.341370547,1.105112482 -0.131062833 0.205629453,1.286512482 0.386137167 0.734429453,0.954512482 0.446337167 1.419029453,0.906112482 1.053137167 1.860429453,1.324712482 0.662937167 2.375229453,1.924712482 0.695737167 1.900029453,1.905112482 -0.011662833 1.613029453,2.015512482 -0.137662833 0.872629453,1.711912482 -0.797462833 0.651429453,1.861112482 -1.076862833 -0.042370547,1.390712482 -1.499862833 -0.457770547,1.480512482 -1.888862833 -1.105370547,0.874712482 -1.749862833 -1.530170547,0.618312482 -1.726062833 -2.243970547,0.259712482 -1.128462833 -2.561970547,-0.367887518 -1.571462833 -2.606570547,-0.384487518 -1.738262833 -1.868170547,-0.975287518 -1.463262833 -1.493370547,-0.944887518 -1.020662833 -0.889170547,-1.203087518 -1.594462833 -0.457370547,-0.636687518 -2.026862833 -0.727570547,-0.158487518 -1.478462833 -0.487170547,-0.483487518 -1.432062833 0.195829453,-0.429887518 -2.191662833 0.281029453,0.317512482 -2.149262833 0.135429453,0.375712482 -1.617262833 0.681829453,-0.019287518 -2.073062833 1.146029453,0.461312482 -2.643662833 0.990029453,1.048912482 -2.211462833 1.236429453,0.744912482 -1.766262833 1.768429453,0.147712482 -2.162062833 2.015429453,-0.324087518 -1.576262833 1.905429453,-1.002087518 -1.792862833 1.623029453,-1.174887518 -1.480862833 0.946629453,-1.800687518 -1.159662833 1.243429453,-1.355887518 -0.772662833 1.731829453,-0.933087518 -0.495462833 1.154429453,-1.023487518 0.155537167 0.775229453,-0.549487518 0.203537167 0.175029453,-0.396687518 0.883137167 -0.128770547,-0.062487518 1.071737167 -0.791770547,-0.023287518 1.732137167 -1.151970547,-0.479287518 2.054137167 -0.623970547,-1.030487518 1.537737167 -0.714770547,-1.281087518 0.959737167 -0.296370547,-1.233087518 0.317737167 -0.698170547,-1.864887518 -0.090062833 -0.794970547,-2.011287518 -0.831062833 -0.786570547,-2.161687518 -1.122062833 -1.471570547,-1.670087518 -0.679262833 -1.822970547,-0.969087518 -0.864862833 -2.046970547,-0.303687518 -0.521262833 -1.940770547,-0.308887518 -0.348462833 -2.687170547,-0.974687518 0.018337167 -2.600770547,-0.606287518 0.511537167 -2.150370547,0.020512482 0.558137167 -2.577570547,0.419512482 0.208537167 -2.031770547,1.071712482 0.000137167 -2.364570547,1.744312482 -0.303862833 -2.177170547,2.024712482 -0.028862833 -1.524570547,1.408112482 0.397937167 -1.392970547,1.287512482 0.559137167 -0.656970547,0.610912482 0.461737167 -0.328370547,0.445712482 0.716737167 0.370229453,0.099312482 0.286737167 0.884029453,-0.328487518 0.528137167 1.458229453,-0.692287518 0.068137167 1.937429453,-1.414487518 0.123937167 2.158429453" radius="0.1" material="color: red" position="" rotation="" scale="" visible="" tube=""></a-tube>
+<a-sphere id="ubi1" position=" 1.763912482 -1.429062833 -2.017970547 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi2" position=" 1.930912482 -1.113462833 -1.349970547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi3" position=" 1.516312482 -0.566062833 -1.021370547 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi4" position=" 1.621712482 -0.235262833 -0.341370547 " color="magenta" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi5" position=" 1.105112482 -0.131062833 0.205629453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi6" position=" 1.286512482 0.386137167 0.734429453 " color="blue" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi7" position=" 0.954512482 0.446337167 1.419029453 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi8" position=" 0.906112482 1.053137167 1.860429453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi9" position=" 1.324712482 0.662937167 2.375229453 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi10" position=" 1.924712482 0.695737167 1.900029453 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi11" position=" 1.905112482 -0.011662833 1.613029453 " color="blue" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi12" position=" 2.015512482 -0.137662833 0.872629453 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi13" position=" 1.711912482 -0.797462833 0.651429453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi14" position=" 1.861112482 -1.076862833 -0.042370547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi15" position=" 1.390712482 -1.499862833 -0.457770547 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi16" position=" 1.480512482 -1.888862833 -1.105370547 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi17" position=" 0.874712482 -1.749862833 -1.530170547 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi18" position=" 0.618312482 -1.726062833 -2.243970547 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi19" position=" 0.259712482 -1.128462833 -2.561970547 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi20" position=" -0.367887518 -1.571462833 -2.606570547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi21" position=" -0.384487518 -1.738262833 -1.868170547 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi22" position=" -0.975287518 -1.463262833 -1.493370547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi23" position=" -0.944887518 -1.020662833 -0.889170547 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi24" position=" -1.203087518 -1.594462833 -0.457370547 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi25" position=" -0.636687518 -2.026862833 -0.727570547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi26" position=" -0.158487518 -1.478462833 -0.487170547 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi27" position=" -0.483487518 -1.432062833 0.195829453 " color="blue" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi28" position=" -0.429887518 -2.191662833 0.281029453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi29" position=" 0.317512482 -2.149262833 0.135429453 " color="blue" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi30" position=" 0.375712482 -1.617262833 0.681829453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi31" position=" -0.019287518 -2.073062833 1.146029453 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi32" position=" 0.461312482 -2.643662833 0.990029453 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi33" position=" 1.048912482 -2.211462833 1.236429453 " color="blue" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi34" position=" 0.744912482 -1.766262833 1.768429453 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi35" position=" 0.147712482 -2.162062833 2.015429453 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi36" position=" -0.324087518 -1.576262833 1.905429453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi37" position=" -1.002087518 -1.792862833 1.623029453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi38" position=" -1.174887518 -1.480862833 0.946629453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi39" position=" -1.800687518 -1.159662833 1.243429453 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi40" position=" -1.355887518 -0.772662833 1.731829453 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi41" position=" -0.933087518 -0.495462833 1.154429453 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi42" position=" -1.023487518 0.155537167 0.775229453 " color="blue" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi43" position=" -0.549487518 0.203537167 0.175029453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi44" position=" -0.396687518 0.883137167 -0.128770547 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi45" position=" -0.062487518 1.071737167 -0.791770547 " color="magenta" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi46" position=" -0.023287518 1.732137167 -1.151970547 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi47" position=" -0.479287518 2.054137167 -0.623970547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi48" position=" -1.030487518 1.537737167 -0.714770547 " color="blue" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi49" position=" -1.281087518 0.959737167 -0.296370547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi50" position=" -1.233087518 0.317737167 -0.698170547 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi51" position=" -1.864887518 -0.090062833 -0.794970547 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi52" position=" -2.011287518 -0.831062833 -0.786570547 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi53" position=" -2.161687518 -1.122062833 -1.471570547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi54" position=" -1.670087518 -0.679262833 -1.822970547 " color="blue" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi55" position=" -0.969087518 -0.864862833 -2.046970547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi56" position=" -0.303687518 -0.521262833 -1.940770547 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi57" position=" -0.308887518 -0.348462833 -2.687170547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi58" position=" -0.974687518 0.018337167 -2.600770547 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi59" position=" -0.606287518 0.511537167 -2.150370547 " color="magenta" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi60" position=" 0.020512482 0.558137167 -2.577570547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi61" position=" 0.419512482 0.208537167 -2.031770547 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi62" position=" 1.071712482 0.000137167 -2.364570547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi63" position=" 1.744312482 -0.303862833 -2.177170547 " color="blue" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi64" position=" 2.024712482 -0.028862833 -1.524570547 " color="red" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi65" position=" 1.408112482 0.397937167 -1.392970547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi66" position=" 1.287512482 0.559137167 -0.656970547 " color="green" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi67" position=" 0.610912482 0.461737167 -0.328370547 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi68" position=" 0.445712482 0.716737167 0.370229453 " color="magenta" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi69" position=" 0.099312482 0.286737167 0.884029453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi70" position=" -0.328487518 0.528137167 1.458229453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi71" position=" -0.692287518 0.068137167 1.937429453 " color="grey" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ubi72" position=" -1.414487518 0.123937167 2.158429453 " color="blue" radius="1" transparent="true" opacity="0.1" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+		</a-marker>
+
+        <!-- Connecting charged atoms -->
+        <a-sphere radius="0.0" color="yellow" id="restr1_0" connector="src: #ubi44; dest: #uim266; alpha: 0" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.0" color="yellow" id="restr1_1" connector="src: #ubi44; dest: #uim266; alpha: 0.1" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.0" color="yellow" id="restr1_2" connector="src: #ubi44; dest: #uim266; alpha: 0.2" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.0" color="yellow" id="restr1_3" connector="src: #ubi44; dest: #uim266; alpha: 0.3" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.0" color="yellow" id="restr1_4" connector="src: #ubi44; dest: #uim266; alpha: 0.4" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.0" color="yellow" id="restr1_5" connector="src: #ubi44; dest: #uim266; alpha: 0.5" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.0" color="yellow" id="restr1_6" connector="src: #ubi44; dest: #uim266; alpha: 0.6" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.0" color="yellow" id="restr1_7" connector="src: #ubi44; dest: #uim266; alpha: 0.7" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.0" color="yellow" id="restr1_8" connector="src: #ubi44; dest: #uim266; alpha: 0.8" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.0" color="yellow" id="restr1_9" connector="src: #ubi44; dest: #uim266; alpha: 0.9" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.0" color="yellow" id="restr1_10" connector="src: #ubi44; dest: #uim266; alpha: 1" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        
+		<!-- add a simple camera -->
+  	    <a-entity camera="" position="" rotation="" scale="" visible=""></a-entity>
+	<canvas class="a-canvas" data-aframe-canvas="true" width="1365" height="429" style="width: 1525px; height: 480px;"></canvas><div class="a-enter-vr embedded" aframe-injected="" style="position: fixed;"><button class="a-enter-vr-button" aframe-injected=""></button></div><div class="a-orientation-modal a-hidden" aframe-injected=""><button aframe-injected="">Exit VR</button></div><a-entity light="" data-aframe-default-light="" aframe-injected="" position="" rotation="" scale="" visible=""></a-entity><a-entity light="" position="" data-aframe-default-light="" aframe-injected="" rotation="" scale="" visible=""></a-entity></a-scene>
+    
+    <audio id="audio1"> <source src="Ubiquitin_UIMdocking_files/computerbeep_20.mp3" type="audio/mpeg"> </audio>
+    <audio id="audio2"> <source src="Ubiquitin_UIMdocking_files/computerbeep_14.mp3" type="audio/mpeg"> </audio>
+
+
+<script type="text/javascript">
+    var forcefield_active = false
+    var restraints_active = false
+    var computer_on = false
+    var tocaubi = new Array(73)
+    var tocauim = new Array(18)
+    var doSaxsJobs=false
+
+    var qexp = [0.0001,0.001,0.002,0.003,0.004,0.005,0.006,0.007,0.008,0.009,0.01,0.015,0.02,0.025,0.03,0.035,0.04,0.045,0.05,0.055,0.06,0.07,0.08,0.09,0.1,0.105,0.11,0.115,0.12,0.125,0.13,0.135,0.14,0.145,0.15,0.155,0.16,0.165,0.17,0.175,0.18,0.185,0.19,0.195,0.2,0.205,0.21,0.215,0.22,0.225,0.23,0.235,0.24,0.245,0.25,0.255,0.26,0.265,0.27,0.275,0.28,0.285,0.29,0.295,0.3,0.305,0.31,0.315,0.32,0.325,0.33,0.335,0.34,0.345,0.35,0.355,0.36,0.365,0.37,0.375,0.38,0.385,0.39,0.395,0.4,0.41,0.42,0.43,0.44,0.45,0.46,0.47,0.48,0.49,0.5,0.51,0.52,0.53,0.54,0.55]
+    //var iexp = [3.6058433434592896, 3.605823979124406, 3.605765298672939, 3.6056674957523507, 3.605530567110053, 3.6053545081916925, 3.6051393131404144, 3.604884974795921, 3.604591484693314, 3.6042588330617376, 3.603887008822797, 3.6014398190033723, 3.5980108966783644, 3.5935973714311564, 3.5881955328429322, 3.5818008153810914, 3.5744077797068097, 3.5660100902663694, 3.556600489004755, 3.5461707650134677, 3.5347117198976337, 3.50866369555581, 3.478361469018764, 3.4436912624758937, 3.404518438527027, 3.38319517548717, 3.3606850592621345, 3.336964232245347, 3.3120069928052884, 3.2857856788229562, 3.2582705444363533, 3.2294296310418136, 3.1992286343112544, 3.1676307699929325, 3.1345966426897043, 3.100084123818789, 3.0640482477836937, 3.0264411393602253, 2.987211990876342, 2.9463071156029943, 2.9036701147914132, 2.8592422112922056, 2.8129628245026472, 2.7647704920686493, 2.714604286855774, 2.6624059380066054, 2.6081229487520288, 2.5517131189458926, 2.4931510359253903, 2.4324373009475524, 2.3696115109424767, 2.304770297814454, 2.2380919751571975, 2.1698693947941186, 2.1005521357225194, 2.0307975138812404, 1.9615261396622292, 1.8939707337629708, 1.8296962978868838, 1.770558219180349, 1.718561288808181, 1.6756018472260539, 1.6431274029067604, 1.621815939261967, 1.611408108933418, 1.610772985176976, 1.6181750237039523, 1.6316218307671244, 1.64916812514071, 1.6691101661839542, 1.6900687172525501, 1.7109926087503737, 1.7311197460229308, 1.749922940869188, 1.7670562861188972, 1.782309072158161, 1.7955691316518583, 1.8067950377078843, 1.8159956735164429, 1.8232155568514323, 1.8285244877546019, 1.8320103637588605, 1.8337742738393603, 1.8339272045631043, 1.8325878638015891, 1.8259377234924727, 1.8148839680745257, 1.8005515244399541, 1.7841064687297865, 1.7667192472175115, 1.7495088387379862, 1.7334692966416427, 1.7193885870827907, 1.7077767948387383, 1.6988227480005247, 1.6923923879829468, 1.6880703002209787, 1.68523320710027, 1.683136839693583, 1.6809978839964665]
+    var iexp = [3.602602323,3.602908021,3.603282235,3.60620554,3.605961191,3.60846816,3.60276107,3.603372168,3.606207613,3.601005922,3.601284398,3.599150491,3.598010897,3.594371651,3.5857224,3.585087342,3.574176295,3.566835101,3.558164878,3.544810303,3.536735579,3.512550331,3.479370759,3.442438672,3.405202325,3.384988637,3.365391406,3.333552509,3.315801464,3.283078401,3.263747012,3.236540983,3.204413224,3.168515544,3.136503793,3.10963567,3.068522068,3.038530566,2.978629565,2.932323867,2.903670115,2.874582125,2.828062842,2.74256464,2.708699187,2.64701839,2.592868579,2.55776668,2.505529643,2.404266098,2.384197946,2.349724051,2.29450651,2.078697333,2.033635604,2.050568744,1.889425721,1.974685215,1.97571222,1.851014225,1.765722021,1.560871539,1.832298469,1.818632351,1.831679939,1.318284612,1.585597545,1.338806014,1.775121495,1.884669514,1.707447809,1.910643026,1.891212991,1.920249397,1.454640434,1.932357985,1.931738881,1.603043676,1.751763682,1.574729559,1.834922673,1.913400462,1.779585048,1.960101652,1.7404603,1.880692748,1.683907635,1.881817666,1.577818094,1.859985735,1.820664882,1.914522432,1.572951881,1.50547923,1.897533897,1.726306805,1.317242858,1.835330578,1.450402587,1.689957694]
+    var isimu = [3.6058433434592896, 3.605823979124406, 3.605765298672939, 3.6056674957523507, 3.605530567110053, 3.6053545081916925, 3.6051393131404144, 3.604884974795921, 3.604591484693314, 3.6042588330617376, 3.603887008822797, 3.6014398190033723, 3.5980108966783644, 3.5935973714311564, 3.5881955328429322, 3.5818008153810914, 3.5744077797068097, 3.5660100902663694, 3.556600489004755, 3.5461707650134677, 3.5347117198976337, 3.50866369555581, 3.478361469018764, 3.4436912624758937, 3.404518438527027, 3.38319517548717, 3.3606850592621345, 3.336964232245347, 3.3120069928052884, 3.2857856788229562, 3.2582705444363533, 3.2294296310418136, 3.1992286343112544, 3.1676307699929325, 3.1345966426897043, 3.100084123818789, 3.0640482477836937, 3.0264411393602253, 2.987211990876342, 2.9463071156029943, 2.9036701147914132, 2.8592422112922056, 2.8129628245026472, 2.7647704920686493, 2.714604286855774, 2.6624059380066054, 2.6081229487520288, 2.5517131189458926, 2.4931510359253903, 2.4324373009475524, 2.3696115109424767, 2.304770297814454, 2.2380919751571975, 2.1698693947941186, 2.1005521357225194, 2.0307975138812404, 1.9615261396622292, 1.8939707337629708, 1.8296962978868838, 1.770558219180349, 1.718561288808181, 1.6756018472260539, 1.6431274029067604, 1.621815939261967, 1.611408108933418, 1.610772985176976, 1.6181750237039523, 1.6316218307671244, 1.64916812514071, 1.6691101661839542, 1.6900687172525501, 1.7109926087503737, 1.7311197460229308, 1.749922940869188, 1.7670562861188972, 1.782309072158161, 1.7955691316518583, 1.8067950377078843, 1.8159956735164429, 1.8232155568514323, 1.8285244877546019, 1.8320103637588605, 1.8337742738393603, 1.8339272045631043, 1.8325878638015891, 1.8259377234924727, 1.8148839680745257, 1.8005515244399541, 1.7841064687297865, 1.7667192472175115, 1.7495088387379862, 1.7334692966416427, 1.7193885870827907, 1.7077767948387383, 1.6988227480005247, 1.6923923879829468, 1.6880703002209787, 1.68523320710027, 1.683136839693583, 1.6809978839964665]
+
+    setInterval(function(){
+		document.getElementById("thescene").object3D.updateMatrixWorld();
+        var p1 = new THREE.Vector3(); p1.setFromMatrixPosition(document.getElementById("uim266").object3D.matrixWorld);
+        var p2 = new THREE.Vector3(); p2.setFromMatrixPosition(document.getElementById("ubi45").object3D.matrixWorld);
+		distancia = 5 * Math.sqrt( Math.pow(p2.x-p1.x,2) + Math.pow(p2.y-p1.y,2) + Math.pow(p2.z-p1.z,2) )
+        document.getElementById("infop").innerHTML="<p align='left'>Ile45-Ala266 distance: " + distancia + " &#8491<br></p>";
+
+        var dx = (p2.x-p1.x)/1000*(distancia-10)
+        var dy = (p2.y-p1.y)/1000*(distancia-10)
+        var dz = (p2.z-p1.z)/1000*(distancia-10)
+        var p1new = new THREE.Vector3()
+        
+		if (restraints_active==true) {
+          for (i=257;i<275;i++) {
+            p1new.setFromMatrixPosition(document.getElementById("uim"+i).object3D.matrixWorld);
+            p1new.x = p1new.x + dx
+            p1new.y = p1new.y + dy
+            p1new.z = p1new.z + dz
+            var p1new = document.getElementById("uimmarker").object3D.worldToLocal(p1new)
+            document.getElementById("uim"+i).setAttribute('position', p1new.x + ' ' + p1new.y + ' ' + p1new.z)
+          }
+          p1new.setFromMatrixPosition(document.getElementById("uimtube").object3D.matrixWorld);
+          p1new.x = p1new.x + dx; p1new.y = p1new.y + dy; p1new.z = p1new.z + dz;
+          var p1new = document.getElementById("uimmarker").object3D.worldToLocal(p1new)
+          document.getElementById("uimtube").setAttribute('position', p1new.x + ' ' + p1new.y + ' ' + p1new.z)
+        }
+
+		if (forcefield_active==true) {
+          for (i=0;i<18;i++) {tocauim[i]=0.1}
+          for (i=0;i<73;i++) {tocaubi[i]=0.1}
+          
+          for (i=257;i<275;i++) {
+            var p1 = new THREE.Vector3(); p1.setFromMatrixPosition(document.getElementById("uim"+i).object3D.matrixWorld);
+            for (j=1;j<73;j++) {
+          	  var p2 = new THREE.Vector3(); p2.setFromMatrixPosition(document.getElementById("ubi"+j).object3D.matrixWorld);
+			  distancia = 5 * Math.sqrt( Math.pow(p2.x-p1.x,2) + Math.pow(p2.y-p1.y,2) + Math.pow(p2.z-p1.z,2) );
+              if (distancia < 12) {
+                tocauim[i-257]=0.8
+                tocaubi[j-1]=0.8
+                if (distancia < 10) {
+                  for (i=257;i<275;i++) {
+                    p1new.setFromMatrixPosition(document.getElementById("uim"+i).object3D.matrixWorld);
+                    p1new.x = p1new.x - dx
+                    p1new.y = p1new.y - dy
+                    p1new.z = p1new.z - dz
+                    var p1new = document.getElementById("uimmarker").object3D.worldToLocal(p1new)
+                    document.getElementById("uim"+i).setAttribute('position', p1new.x + ' ' + p1new.y + ' ' + p1new.z)
+                  }
+                  p1new.setFromMatrixPosition(document.getElementById("uimtube").object3D.matrixWorld);
+                  p1new.x = p1new.x - dx; p1new.y = p1new.y - dy; p1new.z = p1new.z - dz;
+                  var p1new = document.getElementById("uimmarker").object3D.worldToLocal(p1new)
+                  document.getElementById("uimtube").setAttribute('position', p1new.x + ' ' + p1new.y + ' ' + p1new.z)
+                }
+                break
+              }
+            }
+          }
+          for (i=257;i<274;i++) { document.getElementById("uim"+i).setAttribute('opacity',tocauim[i-257])}
+          for (i=1;i<73;i++) { document.getElementById("ubi"+i).setAttribute('opacity',tocaubi[i-1])}
+        }
+        
+        
+		if (doSaxsJobs==true) {
+          var saxserror=0
+          for (ii=0;ii<qexp.length;ii++)
+          {
+            var iq=0;
+            for (i=257;i<275;i++) {
+              var p1 = new THREE.Vector3(); p1.setFromMatrixPosition(document.getElementById("uim"+i).object3D.matrixWorld);
+              for (j=i+1;j<275;j++) {
+                var p2 = new THREE.Vector3(); p2.setFromMatrixPosition(document.getElementById("uim"+j).object3D.matrixWorld);
+                distancia = 5 * Math.sqrt( Math.pow(p2.x-p1.x,2) + Math.pow(p2.y-p1.y,2) + Math.pow(p2.z-p1.z,2) );
+                iq = iq + Math.sin(qexp[ii] * distancia) / qexp[ii] / distancia
+              }
+              for (j=1;j<73;j++) {
+                var p2 = new THREE.Vector3(); p2.setFromMatrixPosition(document.getElementById("ubi"+j).object3D.matrixWorld);
+                distancia = 5 * Math.sqrt( Math.pow(p2.x-p1.x,2) + Math.pow(p2.y-p1.y,2) + Math.pow(p2.z-p1.z,2) );
+                iq = iq + Math.sin(qexp[ii] * distancia) / qexp[ii] / distancia
+              }
+            }
+            for (i=1;i<73;i++) {
+              var p1 = new THREE.Vector3(); p1.setFromMatrixPosition(document.getElementById("ubi"+i).object3D.matrixWorld);
+              for (j=i+1;j<73;j++) {
+                var p2 = new THREE.Vector3(); p2.setFromMatrixPosition(document.getElementById("ubi"+j).object3D.matrixWorld);
+                distancia = 5 * Math.sqrt( Math.pow(p2.x-p1.x,2) + Math.pow(p2.y-p1.y,2) + Math.pow(p2.z-p1.z,2) );
+                iq = iq + Math.sin(qexp[ii] * distancia) / qexp[ii] / distancia
+              }
+            }
+            isimu[ii]=Math.log10(iq+30);
+            saxserror+=Math.pow(iq-Math.pow(10,iexp[ii])-30,2)
+            document.getElementById('saxserrorid').innerHTML='SAXS Sum Sq. Errors = ' + Math.round(saxserror/10000,4)
+          }
+          drawCharts()
+        }
+    }, 200);
+
+    if (annyang) {
+      var commands = {
+        'computer': function() { computer_on=true; document.getElementById("audio2").play();  setTimeout(function(){ computer_on=false; }, 5000);},
+        'hello': function() { if (computer_on==true) { for (i=0;i<11;i++) { document.getElementById("restr1_"+i).setAttribute('radius','0.0') }}},
+        'activate forcefield': function() { if (computer_on==true) {forcefield_active=true; document.getElementById("audio1").play();}},
+        'activate restraints': function() { if (computer_on==true) {restraints_active=true; document.getElementById("audio1").play();}},
+        'stop forcefield': function() { forcefield_active=false; document.getElementById("audio1").play();},
+        'stop restraints': function() { restraints_active=false; document.getElementById("audio1").play();},
+        'restart': function() { if (computer_on==true) {document.getElementById("audio1").play(); location.reload(false)} },
+        'show restraints': function() { if (computer_on==true) { for (i=0;i<11;i++) { document.getElementById("restr1_"+i).setAttribute('radius','0.1') }}},
+        'show plots': function() { document.getElementById('saxsdiv').style.visibility = 'visible'; document.getElementById("audio1").play(); doSaxsJobs=true},
+        'save data': function() { console.log(isimu)},
+        'restart': function() { if (computer_on==true) { window.location.reload(true); } },
+      };
+
+      // Add our commands to annyang
+      annyang.addCommands(commands);
+      // Start listening.
+      annyang.start();
+      
+      google.charts.load('current', {'packages':['corechart']});
+	  google.charts.setOnLoadCallback(drawCharts);
+      
+      function drawCharts() {
+        var Combined1 = new Array();  
+        Combined1[0] = ['q', 'Iexp', 'Isimu'];
+
+        for (i=0;i<iexp.length;i++) {
+          Combined1[i+1] = [ parseFloat(qexp[i]), parseFloat(iexp[i]), parseFloat(isimu[i])]
+		 }
+
+		var data1 = google.visualization.arrayToDataTable(Combined1, false);
+        var options1 = { title: 'SAXS profiles', hAxis: {title: 'q'}, vAxis: {title: 'Intensity'}, legend: 'none', pointSize: 1, explorer: {} };
+        var chart1 = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart1.draw(data1, options1);          
+      }
+    }
+</script>
+
+<div id="arjsDebugUIContainer" style="position: fixed; bottom: 10px; width:100%; text-align: center; z-index: 1;color: grey;"><div style="color: rgba(0, 0, 0, 0.9); background-color: rgba(127, 127, 127, 0.5); display: inline-block; padding: 0.5em; margin: 0.5em; text-align: left;"><span style="display: block;"><b>trackingBackend</b> : artoolkit</span><a style="display: block;" target="_blank" href="https://webxr.io/augmented-website?https://lucianoabriata.altervista.org/jsinscience/arjs/armodeling/ubiquitinuimffvoicesaxs.html">Share on augmented-websites</a></div><div style="color: rgba(0, 0, 0, 0.9); background-color: rgba(127, 127, 127, 0.5); display: inline-block; padding: 0.5em; margin: 0.5em; text-align: left;"><span style="display: block;"><b>markersAreaEnabled</b> :false</span></div><div style="color: rgba(0, 0, 0, 0.9); background-color: rgba(127, 127, 127, 0.5); display: inline-block; padding: 0.5em; margin: 0.5em; text-align: left;"><span style="display: block;"><b>markersAreaEnabled</b> :false</span></div></div></body></html>

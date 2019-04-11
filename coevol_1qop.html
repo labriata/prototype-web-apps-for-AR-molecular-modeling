@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<!--script src="../aframe.min.js"></script-->
+<!--script src="../aframe-ar.js"></script-->
+<html class=""><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><meta aframe-injected="" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui"><meta aframe-injected="" name="mobile-web-app-capable" content="yes"><meta aframe-injected="" name="theme-color" content="black"><script src="coevol_1qop_files/aframe.js"></script><style type="text/css" data-href="src\style\aframe.css">.a-html{bottom:0;left:0;position:fixed;right:0;top:0}.a-body{height:100%;margin:0;overflow:hidden;padding:0;width:100%}:-webkit-full-screen{background-color:transparent}.a-hidden{display:none!important}.a-canvas{height:100%;left:0;position:absolute;top:0;width:100%}.a-canvas.a-grab-cursor:hover{cursor:grab;cursor:-moz-grab;cursor:-webkit-grab}.a-canvas.a-grab-cursor:active,.a-grabbing{cursor:grabbing;cursor:-moz-grabbing;cursor:-webkit-grabbing}// Class is removed when doing <a-scene embedded>. a-scene.fullscreen .a-canvas{width:100%!important;height:100%!important;top:0!important;left:0!important;right:0!important;bottom:0!important;z-index:999999!important;position:fixed!important}.a-inspector-loader{background-color:#ed3160;position:fixed;left:3px;top:3px;padding:6px 10px;color:#fff;text-decoration:none;font-size:12px;font-family:Roboto,sans-serif;text-align:center;z-index:99999;width:204px}@keyframes dots-1{from{opacity:0}25%{opacity:1}}@keyframes dots-2{from{opacity:0}50%{opacity:1}}@keyframes dots-3{from{opacity:0}75%{opacity:1}}@-webkit-keyframes dots-1{from{opacity:0}25%{opacity:1}}@-webkit-keyframes dots-2{from{opacity:0}50%{opacity:1}}@-webkit-keyframes dots-3{from{opacity:0}75%{opacity:1}}.a-inspector-loader .dots span{animation:dots-1 2s infinite steps(1);-webkit-animation:dots-1 2s infinite steps(1)}.a-inspector-loader .dots span:first-child+span{animation-name:dots-2;-webkit-animation-name:dots-2}.a-inspector-loader .dots span:first-child+span+span{animation-name:dots-3;-webkit-animation-name:dots-3}a-scene{display:block;position:relative;height:100%;width:100%}a-assets,a-scene audio,a-scene img,a-scene video{display:none}.a-enter-vr-modal,.a-orientation-modal{font-family:Consolas,Andale Mono,Courier New,monospace}.a-enter-vr-modal a{border-bottom:1px solid #fff;padding:2px 0;text-decoration:none;transition:.1s color ease-in}.a-enter-vr-modal a:hover{background-color:#fff;color:#111;padding:2px 4px;position:relative;left:-4px}.a-enter-vr{font-family:sans-serif,monospace;font-size:13px;width:100%;font-weight:200;line-height:16px;position:absolute;right:20px;bottom:20px}.a-enter-vr.embedded{right:5px;bottom:5px}.a-enter-vr-button,.a-enter-vr-modal,.a-enter-vr-modal a{color:#fff}.a-enter-vr-button{background:url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20245.82%20141.73%22%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill%3A%23fff%3Bfill-rule%3Aevenodd%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Ctitle%3Emask%3C%2Ftitle%3E%3Cpath%20class%3D%22a%22%20d%3D%22M175.56%2C111.37c-22.52%2C0-40.77-18.84-40.77-42.07S153%2C27.24%2C175.56%2C27.24s40.77%2C18.84%2C40.77%2C42.07S198.08%2C111.37%2C175.56%2C111.37ZM26.84%2C69.31c0-23.23%2C18.25-42.07%2C40.77-42.07s40.77%2C18.84%2C40.77%2C42.07-18.26%2C42.07-40.77%2C42.07S26.84%2C92.54%2C26.84%2C69.31ZM27.27%2C0C11.54%2C0%2C0%2C12.34%2C0%2C28.58V110.9c0%2C16.24%2C11.54%2C30.83%2C27.27%2C30.83H99.57c2.17%2C0%2C4.19-1.83%2C5.4-3.7L116.47%2C118a8%2C8%2C0%2C0%2C1%2C12.52-.18l11.51%2C20.34c1.2%2C1.86%2C3.22%2C3.61%2C5.39%2C3.61h72.29c15.74%2C0%2C27.63-14.6%2C27.63-30.83V28.58C245.82%2C12.34%2C233.93%2C0%2C218.19%2C0H27.27Z%22%2F%3E%3C%2Fsvg%3E) 50% 50%/70% 70% no-repeat rgba(0,0,0,.35);border:0;bottom:0;cursor:pointer;min-width:50px;min-height:30px;padding-right:5%;padding-top:4%;position:absolute;right:0;transition:background-color .05s ease;-webkit-transition:background-color .05s ease;z-index:9999}.a-enter-vr-button:active,.a-enter-vr-button:hover{background-color:#666}[data-a-enter-vr-no-webvr] .a-enter-vr-button{border-color:#666;opacity:.65}[data-a-enter-vr-no-webvr] .a-enter-vr-button:active,[data-a-enter-vr-no-webvr] .a-enter-vr-button:hover{background-color:rgba(0,0,0,.35);cursor:not-allowed}.a-enter-vr-modal{background-color:#666;border-radius:0;display:none;min-height:32px;margin-right:70px;padding:9px;width:280px;right:2%;position:absolute}.a-enter-vr-modal:after{border-bottom:10px solid transparent;border-left:10px solid #666;border-top:10px solid transparent;display:inline-block;content:'';position:absolute;right:-5px;top:5px;width:0;height:0}.a-enter-vr-modal a,.a-enter-vr-modal p{display:inline}.a-enter-vr-modal p{margin:0}.a-enter-vr-modal p:after{content:' '}[data-a-enter-vr-no-headset].a-enter-vr:hover .a-enter-vr-modal,[data-a-enter-vr-no-webvr].a-enter-vr:hover .a-enter-vr-modal{display:block}.a-orientation-modal{background:url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20version%3D%221.1%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2090%2090%22%20enable-background%3D%22new%200%200%2090%2090%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C0%200%2C0%200%2C0%20%22%3E%3C/polygon%3E%3Cg%3E%3Cpath%20d%3D%22M71.545%2C48.145h-31.98V20.743c0-2.627-2.138-4.765-4.765-4.765H18.456c-2.628%2C0-4.767%2C2.138-4.767%2C4.765v42.789%20%20%20c0%2C2.628%2C2.138%2C4.766%2C4.767%2C4.766h5.535v0.959c0%2C2.628%2C2.138%2C4.765%2C4.766%2C4.765h42.788c2.628%2C0%2C4.766-2.137%2C4.766-4.765V52.914%20%20%20C76.311%2C50.284%2C74.173%2C48.145%2C71.545%2C48.145z%20M18.455%2C16.935h16.344c2.1%2C0%2C3.808%2C1.708%2C3.808%2C3.808v27.401H37.25V22.636%20%20%20c0-0.264-0.215-0.478-0.479-0.478H16.482c-0.264%2C0-0.479%2C0.214-0.479%2C0.478v36.585c0%2C0.264%2C0.215%2C0.478%2C0.479%2C0.478h7.507v7.644%20%20%20h-5.534c-2.101%2C0-3.81-1.709-3.81-3.81V20.743C14.645%2C18.643%2C16.354%2C16.935%2C18.455%2C16.935z%20M16.96%2C23.116h19.331v25.031h-7.535%20%20%20c-2.628%2C0-4.766%2C2.139-4.766%2C4.768v5.828h-7.03V23.116z%20M71.545%2C73.064H28.757c-2.101%2C0-3.81-1.708-3.81-3.808V52.914%20%20%20c0-2.102%2C1.709-3.812%2C3.81-3.812h42.788c2.1%2C0%2C3.809%2C1.71%2C3.809%2C3.812v16.343C75.354%2C71.356%2C73.645%2C73.064%2C71.545%2C73.064z%22%3E%3C/path%3E%3Cpath%20d%3D%22M28.919%2C58.424c-1.466%2C0-2.659%2C1.193-2.659%2C2.66c0%2C1.466%2C1.193%2C2.658%2C2.659%2C2.658c1.468%2C0%2C2.662-1.192%2C2.662-2.658%20%20%20C31.581%2C59.617%2C30.387%2C58.424%2C28.919%2C58.424z%20M28.919%2C62.786c-0.939%2C0-1.703-0.764-1.703-1.702c0-0.939%2C0.764-1.704%2C1.703-1.704%20%20%20c0.94%2C0%2C1.705%2C0.765%2C1.705%2C1.704C30.623%2C62.022%2C29.858%2C62.786%2C28.919%2C62.786z%22%3E%3C/path%3E%3Cpath%20d%3D%22M69.654%2C50.461H33.069c-0.264%2C0-0.479%2C0.215-0.479%2C0.479v20.288c0%2C0.264%2C0.215%2C0.478%2C0.479%2C0.478h36.585%20%20%20c0.263%2C0%2C0.477-0.214%2C0.477-0.478V50.939C70.131%2C50.676%2C69.917%2C50.461%2C69.654%2C50.461z%20M69.174%2C51.417V70.75H33.548V51.417H69.174z%22%3E%3C/path%3E%3Cpath%20d%3D%22M45.201%2C30.296c6.651%2C0%2C12.233%2C5.351%2C12.551%2C11.977l-3.033-2.638c-0.193-0.165-0.507-0.142-0.675%2C0.048%20%20%20c-0.174%2C0.198-0.153%2C0.501%2C0.045%2C0.676l3.883%2C3.375c0.09%2C0.075%2C0.198%2C0.115%2C0.312%2C0.115c0.141%2C0%2C0.273-0.061%2C0.362-0.166%20%20%20l3.371-3.877c0.173-0.2%2C0.151-0.502-0.047-0.675c-0.194-0.166-0.508-0.144-0.676%2C0.048l-2.592%2C2.979%20%20%20c-0.18-3.417-1.629-6.605-4.099-9.001c-2.538-2.461-5.877-3.817-9.404-3.817c-0.264%2C0-0.479%2C0.215-0.479%2C0.479%20%20%20C44.72%2C30.083%2C44.936%2C30.296%2C45.201%2C30.296z%22%3E%3C/path%3E%3C/g%3E%3C/svg%3E) center/50% 50% no-repeat rgba(244,244,244,1);bottom:0;font-size:14px;font-weight:600;left:0;line-height:20px;right:0;position:fixed;top:0;z-index:9999999}.a-orientation-modal:after{color:#666;content:"Insert phone into Cardboard holder.";display:block;position:absolute;text-align:center;top:70%;transform:translateY(-70%);width:100%}.a-orientation-modal button{background:url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20version%3D%221.1%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%20100%22%20enable-background%3D%22new%200%200%20100%20100%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M55.209%2C50l17.803-17.803c1.416-1.416%2C1.416-3.713%2C0-5.129c-1.416-1.417-3.713-1.417-5.129%2C0L50.08%2C44.872%20%20L32.278%2C27.069c-1.416-1.417-3.714-1.417-5.129%2C0c-1.417%2C1.416-1.417%2C3.713%2C0%2C5.129L44.951%2C50L27.149%2C67.803%20%20c-1.417%2C1.416-1.417%2C3.713%2C0%2C5.129c0.708%2C0.708%2C1.636%2C1.062%2C2.564%2C1.062c0.928%2C0%2C1.856-0.354%2C2.564-1.062L50.08%2C55.13l17.803%2C17.802%20%20c0.708%2C0.708%2C1.637%2C1.062%2C2.564%2C1.062s1.856-0.354%2C2.564-1.062c1.416-1.416%2C1.416-3.713%2C0-5.129L55.209%2C50z%22%3E%3C/path%3E%3C/svg%3E) no-repeat;border:none;height:50px;text-indent:-9999px;width:50px}</style><style type="text/css" data-href="src\style\rStats.css">.rs-base{background-color:#333;color:#fafafa;border-radius:0;font:10px monospace;left:5px;line-height:1em;opacity:.85;overflow:hidden;padding:10px;position:fixed;top:5px;width:300px;z-index:10000}.rs-base div.hidden{display:none}.rs-base h1{color:#fff;cursor:pointer;font-size:1.4em;font-weight:300;margin:0 0 5px;padding:0}.rs-group{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-flex-direction:column-reverse;flex-direction:column-reverse;margin-bottom:5px}.rs-group:last-child{margin-bottom:0}.rs-counter-base{align-items:center;display:-webkit-box;display:-webkit-flex;display:flex;height:10px;-webkit-justify-content:space-between;justify-content:space-between;margin:2px 0}.rs-counter-base.alarm{color:#b70000;text-shadow:0 0 0 #b70000,0 0 1px #fff,0 0 1px #fff,0 0 2px #fff,0 0 2px #fff,0 0 3px #fff,0 0 3px #fff,0 0 4px #fff,0 0 4px #fff}.rs-counter-id{font-weight:300;-webkit-box-ordinal-group:0;-webkit-order:0;order:0;width:54px}.rs-counter-value{font-weight:300;-webkit-box-ordinal-group:1;-webkit-order:1;order:1;text-align:right;width:35px}.rs-canvas{-webkit-box-ordinal-group:2;-webkit-order:2;order:2}@media (min-width:480px){.rs-base{left:20px;top:20px}}</style>
+<script src="coevol_1qop_files/aframe-ar.js"> </script>
+<script src="coevol_1qop_files/client.js"></script>
+<script src="coevol_1qop_files/aframe-extras.js"></script>
+
+
+<title>Ubiquitin - UIM simplest</title></head>
+<body style="margin: -229.375px 0px 0px; overflow: hidden; font-family: monospace; width: 1525px; height: 1143.75px;" class="">
+<style>
+  canvas  {	-moz-transform: scale(-1, 1);	-webkit-transform: scale(-1, 1);	-o-transform: scale(-1, 1);	-ms-transform: scale(-1, 1);	transform: scale(-1, 1);  }
+  video  {	-moz-transform: scale(-1, 1);	-webkit-transform: scale(-1, 1);	-o-transform: scale(-1, 1);	-ms-transform: scale(-1, 1);	transform: scale(-1, 1);  }
+</style>
+<div style="position: fixed; top: 10px; width:inherit; text-align: center; z-index: 1; background-color: rgba(255, 255, 255, 0.6);">
+  <font size="4">
+  <p align="left"><a href="https://clustrmaps.com/site/16ven" title="Visit tracker" target="_blank"><img src="coevol_1qop_files/map_v2.png" alt="" width="1%" height="1%"></a>
+  <b>Example of protein-protein coevolution couplings mapped on freely 
+movable structures. Example provided by chains A and B from PDB ID 1QOP.
+ Listed are the top 3 couplings (which are good) and the first 2 
+couplings which have a scaled score below 1 (which are not too good). 
+See <a href="https://elifesciences.org/articles/02030" target="_blank">eLife 2014</a> and <a href="http://gremlin.bakerlab.org/cplx.php?uni_a=1QOP_A&amp;uni_b=1QOP_B" target="_blank">the corresponding entry at Gremlin's web site</a> for more.
+  <br>Amino acids represented by spheres and colored by type. Print or load in phones <a href="https://lucianoabriata.altervista.org/jsinscience/arjs/armodeling/markers.docx" download="">these markers</a></b></p>
+  </font>
+</div>
+<div style="position: fixed; top: 0px; right:0px; width:400; text-align: right; z-index: 1; background-color: rgba(255, 255, 255, 0);">
+  <font size="4">
+  <p align="right"><a href="" target="_blank"><b>[Open in new window]</b></a></p>
+  </font>
+</div>
+
+	<a-scene embedded="" artoolkit="sourceType: webcam;" id="thescene" class="" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+		<!-- handle hiro marker-->
+		<a-marker preset="hiro" id="uimmarker" position="" rotation="" scale="" visible="" material="" arjs-anchor="" arjs-hit-testing="">
+			<a-tube path="-0.83 -0.36 1.54,-1.04 -0.42 1.23,-0.98 -0.12 1.01,-0.97 -0.29 0.67,-1.28 -0.49 0.76,-1.47 -0.18 0.86,-1.35 0.01 0.54,-1.45 -0.26 0.3,-1.79 -0.3 0.47,-1.85 0.07 0.44,-1.74 0.07 0.07,-1.96 -0.22 -0.01,-2.26 -0.04 0.15,-2.18 0.24 -0.1,-2.1 0.02 -0.4,-1.76 0.18 -0.41,-1.41 0.05 -0.47,-1.12 0.16 -0.25,-0.86 0.4 -0.38,-0.53 0.36 -0.2,-0.23 0.58 -0.28,0.12 0.47 -0.2,0.4 0.71 -0.1,0.74 0.67 0.06,0.75 0.81 0.41,0.97 1.11 0.44,0.98 1.19 0.07,1.08 1.46 0.01,1.12 1.55 0.38,0.94 1.46 0.7,0.73 1.78 0.72,0.63 1.78 0.35,0.56 1.41 0.36,0.32 1.46 0.66,0.15 1.74 0.45,0.13 1.52 0.14,-0.03 1.24 0.34,-0.29 1.47 0.49,-0.37 1.6 0.14,-0.41 1.24 0.01,-0.65 1.17 0.29,-0.84 1.5 0.25,-0.87 1.44 -0.13,-1.04 1.1 -0.08,-0.79 0.82 -0.01,-0.96 0.53 0.15" radius="0.05" material="color: black" position="" rotation="" scale="" visible="" tube=""></a-tube>
+			<a-tube path="-0.65 0.38 0.29,-0.27 0.44 0.28,0.02 0.22 0.16,0.34 0.36 0.3,0.7 0.27 0.22,0.99 0.29 0.47,1.31 0.4 0.29,1.54 0.11 0.22,1.88 0.09 0.07,1.79 -0.18 -0.19,1.43 -0.17 -0.3,1.44 -0.46 -0.55,1.07 -0.46 -0.63,1.06 -0.09 -0.72,1.11 0.08 -1.06,1.29 0.42 -1.09,1.01 0.64 -0.97,1 0.48 -0.62,1.38 0.42 -0.63,1.41 0.8 -0.65,1.16 0.85 -0.37,1.38 0.64 -0.15,1.68 0.84 -0.26,1.5 1.17 -0.18,1.4 1.04 0.17,1.76 0.93 0.24,1.89 1.27 0.13,1.67 1.41 0.4,1.81 1.17 0.65,1.49 0.96 0.7,1.53 0.65 0.91,1.29 0.38 1.01,1.27 0.52 1.36,1.15 0.86 1.22,0.9 0.67 1,0.75 0.52 1.31,0.73 0.86 1.47,0.55 0.98 1.16,0.31 0.68 1.16,0.21 0.76 1.52,0.14 1.12 1.43,-0.07 1.01 1.12,-0.27 0.77 1.33,-0.32 1.04 1.6,-0.48 1.26 1.34,-0.67 1 1.15,-0.83 0.72 1.36,-1 0.5 1.11,-0.81 0.5 0.79" radius="0.05" material="color: black" position="" rotation="" scale="" visible="" tube=""></a-tube>
+			<a-tube path="-0.63 0.17 0.73,-0.26 0.21 0.72,-0.05 -0.05 0.55,0.33 -0.06 0.53,0.53 -0.17 0.23,0.85 -0.32 0.37,1.17 -0.49 0.26,1.25 -0.8 0.48,1.58 -0.68 0.63,1.4 -0.38 0.79,1.15 -0.62 0.95,1.4 -0.89 1.05,1.69 -0.66 1.15,1.63 -0.62 1.51,1.37 -0.89 1.56,1.06 -0.98 1.37,0.83 -0.99 1.67,0.96 -0.65 1.79,0.89 -0.5 1.44,0.52 -0.62 1.45,0.49 -0.5 1.81,0.61 -0.15 1.71,0.35 -0.15 1.42,0.08 -0.24 1.67,0.2 0.04 1.91,0.18 0.31 1.65,-0.15 0.19 1.5,-0.04 0.04 1.17,-0.3 -0.21 1.03,-0.1 -0.42 0.78,0.25 -0.51 0.65,0.34 -0.63 0.31,0.7 -0.76 0.3,0.79 -0.74 -0.07,1.07 -0.99 -0.07,0.91 -1.26 0.15,0.72 -1.51 -0.06,0.46 -1.73 0.1,0.72 -2.01 0.12,0.93 -1.8 0.37,0.65 -1.63 0.54,0.58 -1.83 0.85,0.76 -1.62 1.12,0.64 -1.3 0.96,0.27 -1.4 0.94,0.28 -1.55 1.29,0.43 -1.24 1.45" radius="0.05" material="color: black" position="" rotation="" scale="" visible="" tube=""></a-tube>
+			<a-tube path="0.19 -1.02 1.25,-0.11 -1.22 1.38,0.02 -1.21 1.74,0.03 -0.83 1.73,-0.3 -0.77 1.55,-0.13 -0.68 1.23,-0.26 -0.82 0.89,0.02 -0.98 0.69,-0.04 -0.9 0.32,0.06 -1.14 0.04,0.1 -1.07 -0.33,-0.08 -1.28 -0.58,0.11 -1.29 -0.91,-0.09 -1.23 -1.23,-0.07 -1.6 -1.3,-0.06 -1.77 -0.97,-0.16 -2.13 -0.97,-0.43 -2.29 -0.76,-0.21 -2.4 -0.47,-0.07 -2.05 -0.44,-0.41 -1.89 -0.45,-0.52 -2.12 -0.16,-0.21 -2.03 0.04,-0.25 -1.66 -0.02,-0.61 -1.68 0.08,-0.53 -1.87 0.4,-0.22 -1.68 0.5,-0.32 -1.32 0.43,-0.55 -1.08 0.62,-0.69 -0.73 0.57,-0.66 -0.73 0.19,-0.5 -0.94 -0.08,-0.24 -0.77 -0.3,-0.32 -0.85 -0.66,-0.04 -0.78 -0.9,-0.14 -0.63 -1.24,0.17 -0.77 -1.41,0.52 -0.91 -1.37,0.81 -0.66 -1.33,0.85 -0.39 -1.07,0.65 -0.08 -0.97,0.61 0.18 -1.24,0.34 0.4 -1.39,0.49 0.37 -1.74" radius="0.05" material="color: black" position="" rotation="" scale="" visible="" tube=""></a-tube>
+			<a-tube path="0.41 0 -1.76,0.03 -0.08 -1.75,-0.08 -0.44 -1.67,-0.75 -1 -1.75,-0.75 -1.07 -1.37,-1.11 -1.18 -1.34,-1.04 -1.56 -1.3,-0.78 -1.49 -1.02,-1.02 -1.25 -0.86,-1.3 -1.52 -0.86,-1.07 -1.8 -0.72,-0.97 -1.57 -0.44,-1.33 -1.51 -0.35,-1.4 -1.88 -0.37,-1.12 -1.94 -0.11,-1.25 -1.66 0.11,-0.94 -1.45 0.07,-0.92 -1.09 0.2,-1.06 -0.84 -0.05,-0.83 -0.78 -0.34,-0.65 -0.45 -0.41,-0.49 -0.44 -0.76,-0.15 -0.28 -0.78,0.14 -0.2 -1.03,0.09 0.05 -1.31,-0.24 0.2 -1.2,-0.22 0.56 -1.31,-0.55 0.67 -1.45,-0.91 0.69 -1.34,-1.03 0.43 -1.6,-0.79 0.17 -1.46,-0.96 0.22 -1.11,-1.3 0.17 -1.26,-1.18 -0.13 -1.46,-1.02 -0.3 -1.16,-1.35 -0.27 -0.96,-1.56 -0.38 -1.25,-1.34 -0.69 -1.27,-1.42 -0.78 -0.91,-1.13 -0.63 -0.72,-1.22 -0.43 -0.4,-1 -0.14 -0.51,-0.67 -0.03 -0.65" radius="0.05" material="color: black" position="" rotation="" scale="" visible="" tube=""></a-tube>
+			<a-tube path="-0.34 0.1 -0.52,-0.14 0.37 -0.71,0.21 0.46 -0.62,0.44 0.57 -0.9,0.18 0.8 -1.05,0.15 0.98 -0.71,0.52 0.98 -0.65,0.58 1.14 -0.99,0.36 1.44 -0.88,0.6 1.48 -0.58,0.91 1.45 -0.81,0.77 1.7 -1.07,0.69 1.97 -0.81,0.98 1.96 -0.56,1.04 2.33 -0.61,0.68 2.42 -0.55,0.54 2.26 -0.24,0.2 2.43 -0.28,0.16 2.33 -0.64,0.26 1.98 -0.54,-0.03 1.96 -0.29,-0.27 2.1 -0.54,-0.18 1.85 -0.81,-0.18 1.56 -0.56,-0.53 1.67 -0.45,-0.66 1.69 -0.81,-0.51 1.35 -0.9,-0.64 1.17 -0.59,-0.98 1.33 -0.63,-1.01 1.2 -0.99,-0.89 0.85 -0.9,-1.13 0.83 -0.6,-1.42 0.95 -0.82,-1.36 0.66 -1.06,-1.41 0.41 -0.78,-1.78 0.51 -0.75" radius="0.05" material="color: black" position="" rotation="" scale="" visible="" tube=""></a-tube>
+<a-sphere id="MET_1" position="-0.81 -0.22 1.53" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_2" position="-1.2 -0.49 1.28" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_3" position="-0.89 -0.02 1.04" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_4" position="-0.89 -0.39 0.63" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_5" position="-1.32 -0.59 0.89" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_6" position="-1.46 -0.09 0.99" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_7" position="-1.23 0.04 0.52" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_8" position="-1.41 -0.4 0.3" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_9" position="-1.84 -0.34 0.63" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_10" position="-1.79 0.18 0.52" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_11" position="-1.62 0.04 0.04" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_12" position="-1.97 -0.36 0.06" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_13" position="-2.29 0.01 0.31" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_14" position="-2.11 0.35 -0.04" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_15" position="-2.25 0.03 -0.47" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_16" position="-1.75 0.3 -0.3" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_17" position="-1.43 0.05 -0.45" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_18" position="-1.08 0.07 -0.14" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_19" position="-0.91 0.53 -0.44" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_20" position="-0.53 0.21 -0.13" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_21" position="-0.26 0.73 -0.24" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_22" position="0.17 0.35 -0.25" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_23" position="0.35 0.86 -0.04" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_24" position="0.85 0.68 -0.01" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_25" position="0.72 0.73 0.56" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_26" position="0.95 1.11 0.45" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_27" position="0.93 1.08 -0.02" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_28" position="1.06 1.58 -0.07" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_29" position="1.1 1.55 0.4" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_30" position="0.97 1.44 0.86" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_31" position="0.76 1.92 0.77" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_32" position="0.7 1.81 0.25" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_33" position="0.63 1.3 0.41" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_34" position="0.33 1.51 0.81" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_35" position="0.19 1.87 0.42" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_36" position="0.23 1.44 0.1" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_37" position="0.02 1.15 0.47" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_38" position="-0.29 1.59 0.6" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_39" position="-0.29 1.67 0.06" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_40" position="-0.33 1.13 0.03" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_41" position="-0.64 1.17 0.45" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_42" position="-0.81 1.64 0.29" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_43" position="-0.77 1.45 -0.21" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_44" position="-1.06 1.1 -0.07" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_45" position="-0.67 0.84 0.05" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_46" position="-1.06 0.42 0.09" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_47" position="-0.68 0.23 0.29" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_48" position="-0.23 0.53 0.39" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_49" position="-0.01 0.14 0.05" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_50" position="0.29 0.43 0.45" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_51" position="0.68 0.27 0.24" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_52" position="0.98 0.2 0.6" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_53" position="1.34 0.54 0.33" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_54" position="1.44 -0.02 0.22" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_55" position="1.98 0.04 0.15" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_56" position="1.87 -0.29 -0.14" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_57" position="1.34 -0.04 -0.28" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_58" position="1.52 -0.57 -0.51" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_59" position="0.94 -0.53 -0.52" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_60" position="1.06 0.01 -0.59" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_61" position="1.09 0.08 -1.04" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_62" position="1.31 0.47 -1.21" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_63" position="0.84 0.65 -1" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_64" position="0.88 0.37 -0.56" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_65" position="1.45 0.38 -0.73" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_66" position="1.36 0.88 -0.76" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_67" position="0.99 0.8 -0.35" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_68" position="1.39 0.49 -0.16" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_69" position="1.71 0.86 -0.39" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_70" position="1.35 1.23 -0.22" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_71" position="1.29 0.92 0.21" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_72" position="1.81 0.82 0.18" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_73" position="1.84 1.34 0.01" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_74" position="1.49 1.44 0.4" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_75" position="1.79 1.17 0.67" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_76" position="1.35 0.96 0.61" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_77" position="1.58 0.67 1.06" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_78" position="1.31 0.23 1.04" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_79" position="1.35 0.55 1.48" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_80" position="1.21 0.96 1.15" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="CYS_81" position="0.91 0.56 0.92" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_82" position="0.78 0.41 1.41" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_83" position="0.82 0.96 1.52" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_84" position="0.57 0.98 1.03" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_85" position="0.33 0.54 1.17" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_86" position="0.28 0.76 1.66" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_87" position="0.21 1.23 1.4" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_88" position="-0.04 0.93 1.02" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_89" position="-0.25 0.64 1.41" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_90" position="-0.24 1.11 1.69" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_91" position="-0.43 1.33 1.24" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_92" position="-0.64 0.98 1.03" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_93" position="-0.95 0.77 1.49" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_94" position="-1.18 0.53 1.11" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_95" position="-0.76 0.63 0.74" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_96" position="-0.72 0.07 0.65" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_97" position="-0.21 0.3 0.84" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_98" position="-0.07 -0.05 0.56" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_99" position="0.4 -0.08 0.67" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_100" position="0.5 -0.1 0.11" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_101" position="0.82 -0.38 0.53" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_102" position="1.26 -0.43 0.2" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_103" position="1.27 -0.93 0.44" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_104" position="1.68 -0.63 0.58" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_105" position="1.31 -0.26 0.74" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_106" position="1.02 -0.7 0.89" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_107" position="1.43 -0.98 0.96" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_108" position="1.65 -0.51 1.14" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_109" position="1.61 -0.47 1.57" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_110" position="1.34 -0.89 1.58" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_111" position="1.01 -1.12 1.31" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_112" position="0.82 -1.08 1.81" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_113" position="1.08 -0.61 1.84" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_114" position="0.91 -0.55 1.32" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_115" position="0.45 -0.76 1.43" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_116" position="0.54 -0.55 1.95" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_117" position="0.72 -0.11 1.67" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="CYS_118" position="0.31 -0.26 1.33" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_119" position="0.05 -0.36 1.77" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_120" position="0.31 0.05 1.99" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_121" position="0.27 0.36 1.57" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_122" position="-0.17 0.19 1.52" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_123" position="0.08 -0.01 1.15" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_124" position="-0.44 -0.16 0.97" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_125" position="-0.2 -0.44 0.67" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_126" position="0.33 -0.55 0.78" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_127" position="0.26 -0.57 0.2" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_128" position="0.74 -0.85 0.42" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_129" position="0.82 -0.61 -0.12" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_130" position="1.19 -0.94 -0.06" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_131" position="0.85 -1.22 0.32" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_132" position="0.78 -1.59 -0.15" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_133" position="0.31 -1.79 0.06" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_134" position="0.79 -2.05 0.02" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_135" position="1.02 -1.71 0.33" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_136" position="0.49 -1.59 0.49" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_137" position="0.6 -1.98 0.9" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_138" position="0.89 -1.62 1.15" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_139" position="0.64 -1.25 0.84" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_140" position="0.19 -1.49 0.85" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_141" position="0.35 -1.67 1.35" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_142" position="0.54 -1.19 1.44" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_143" position="0.14 -1.02 1.12" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_144" position="-0.18 -1.36 1.36" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_145" position="0.12 -1.27 1.81" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_146" position="0.14 -0.76 1.71" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_147" position="-0.4 -0.69 1.67" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_148" position="0 -0.65 1.23" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_149" position="-0.39 -0.75 0.83" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_150" position="0.04 -1.12 0.75" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_151" position="-0.06 -0.75 0.29" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_152" position="0.01 -1.29 0.08" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_153" position="0.21 -1.02 -0.37" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="CYS_154" position="-0.26 -1.28 -0.56" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_155" position="0.19 -1.39 -0.92" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_156" position="-0.06 -1.13 -1.31" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_157" position="0.04 -1.58 -1.37" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_158" position="-0.14 -1.7 -0.82" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_159" position="-0.09 -2.25 -0.98" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_160" position="-0.53 -2.42 -0.78" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_161" position="-0.1 -2.49 -0.46" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_162" position="0 -1.97 -0.53" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_163" position="-0.54 -1.91 -0.54" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_164" position="-0.55 -2.27 -0.15" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_165" position="-0.09 -2.05 0.02" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_166" position="-0.26 -1.58 -0.14" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_167" position="-0.75 -1.76 0.02" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_168" position="-0.5 -2.01 0.41" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_169" position="-0.11 -1.69 0.45" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_170" position="-0.35 -1.32 0.45" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_171" position="-0.56 -1.08 0.78" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_172" position="-0.72 -0.73 0.58" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_173" position="-0.67 -0.59 0.15" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_174" position="-0.6 -1.06 -0.14" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_175" position="-0.13 -0.73 -0.24" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_176" position="-0.49 -0.84 -0.69" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_177" position="0.06 -0.88 -0.9" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_178" position="-0.17 -0.48 -1.25" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_178" position="-0.16 -0.48 -1.25" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_179" position="0.18 -0.66 -1.49" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_180" position="0.56 -1.01 -1.45" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_181" position="0.79 -0.66 -1.32" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_182" position="0.97 -0.34 -1.03" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_183" position="0.63 0 -0.82" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_184" position="0.59 0.18 -1.22" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_185" position="0.3 0.55 -1.33" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_186" position="0.61 0.41 -1.75" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_187" position="0.48 -0.11 -1.71" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_188" position="-0.09 -0.01 -1.82" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_189" position="-0.1 -0.44 -1.65" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_192" position="-0.86 -1.08 -1.83" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_193" position="-0.71 -0.96 -1.26" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_194" position="-1.24 -1.18 -1.44" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_195" position="-1 -1.66 -1.38" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_196" position="-0.67 -1.42 -1.02" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_197" position="-1.1 -1.12 -0.9" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_198" position="-1.38 -1.58 -0.97" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_199" position="-0.97 -1.86 -0.78" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_200" position="-0.92 -1.43 -0.43" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_201" position="-1.46 -1.43 -0.42" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_202" position="-1.38 -1.97 -0.47" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_203" position="-1 -1.96 -0.14" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_204" position="-1.33 -1.74 0.25" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_205" position="-0.88 -1.43 -0.05" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_206" position="-0.83 -1.04 0.3" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_207" position="-1.17 -0.72 0.02" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_208" position="-0.85 -0.86 -0.45" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_209" position="-0.61 -0.36 -0.29" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_210" position="-0.59 -0.43 -0.87" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_211" position="-0.17 -0.28 -0.77" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_212" position="0.18 -0.33 -1.05" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_213" position="0.07 0.05 -1.3" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_214" position="-0.35 0.16 -1.06" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_215" position="-0.12 0.59 -1.37" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_216" position="-0.58 0.65 -1.59" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_217" position="-1.01 0.82 -1.36" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_218" position="-1.05 0.45 -1.74" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_219" position="-0.67 0.18 -1.43" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_220" position="-0.99 0.35 -1.02" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_221" position="-1.41 0.26 -1.34" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_222" position="-1.09 -0.13 -1.55" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_223" position="-0.94 -0.24 -1.05" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_224" position="-1.43 -0.13 -0.89" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_225" position="-1.59 -0.31 -1.37" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_226" position="-1.21 -0.69 -1.29" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_227" position="-1.45 -0.78 -0.89" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_228" position="-1.03 -0.56 -0.75" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_229" position="-1.23 -0.48 -0.25" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_230" position="-1.02 -0.14 -0.49" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_231" position="-0.72 0.04 -0.77" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_232" position="-0.27 0 -0.44" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_233" position="-0.26 0.48 -0.76" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_234" position="0.19 0.46 -0.6" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_235" position="0.48 0.48 -1" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_236" position="0.01 0.76 -1.08" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_237" position="0.08 0.91 -0.56" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_238" position="0.59 0.86 -0.61" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_239" position="0.5 1.1 -1.11" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_240" position="0.19 1.44 -0.82" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_241" position="0.61 1.38 -0.46" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_242" position="0.91 1.33 -0.88" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_243" position="0.62 1.68 -1.13" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_244" position="0.52 1.97 -0.75" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_245" position="1.09 1.89 -0.56" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_246" position="1.08 2.39 -0.73" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_247" position="0.57 2.47 -0.66" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_248" position="0.57 2.3 -0.09" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_249" position="0.16 2.59 -0.27" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_250" position="0.21 2.37 -0.75" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_251" position="0.36 1.94 -0.43" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_252" position="-0.06 2.03 -0.14" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_253" position="-0.29 2.24 -0.59" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_254" position="-0.07 1.85 -0.88" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_255" position="-0.13 1.55 -0.41" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_256" position="-0.6 1.81 -0.38" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_257" position="-0.63 1.78 -0.91" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_258" position="-0.39 1.31 -0.89" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_259" position="-0.62 1.19 -0.43" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_260" position="-1.04 1.48 -0.62" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_261" position="-0.95 1.25 -1.09" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_262" position="-0.77 0.82 -0.83" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_263" position="-1.15 0.9 -0.45" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_264" position="-1.45 1.08 -0.89" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_265" position="-1.26 0.64 -1.12" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_266" position="-1.35 0.4 -0.64" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_267" position="-1.84 0.65 -0.71" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+		</a-marker>
+		
+		<!-- handle kanji marker -->
+		<a-marker preset="kanji" id="ubimarker" position="" rotation="" scale="" visible="" material="" arjs-anchor="" arjs-hit-testing="">
+			<a-tube path="-2.56 -1 0.4,-2.22 -1.1 0.28,-2.03 -1.41 0.16,-1.72 -1.31 0.36,-1.66 -1.14 0.69,-1.65 -0.76 0.65,-1.47 -0.72 0.98,-1.13 -0.79 1.14,-1.24 -0.79 1.51,-1.4 -0.45 1.57,-1.24 -0.3 1.26,-1.37 -0.27 0.9,-1.73 -0.29 0.78,-1.92 -0.13 0.5,-2 0.22 0.6,-2.12 0.36 0.27,-2.45 0.52 0.17,-2.71 0.26 0.1,-2.7 0.33 -0.28,-2.35 0.18 -0.29,-2.43 -0.15 -0.11,-2.53 -0.34 -0.43,-2.2 -0.24 -0.6,-2 -0.38 -0.3,-2.2 -0.69 -0.28,-2.16 -0.75 -0.66,-1.78 -0.69 -0.62,-1.76 -0.94 -0.33,-1.95 -1.2 -0.53,-1.73 -1.15 -0.84,-1.42 -1.17 -0.63,-1.52 -1.5 -0.45,-1.61 -1.65 -0.79,-1.28 -1.53 -0.95,-1.07 -1.67 -0.67,-1.22 -2.02 -0.75,-1.18 -1.97 -1.13,-0.87 -2.13 -1.27,-0.9 -1.92 -1.59,-0.9 -1.6 -1.39,-0.61 -1.72 -1.18,-0.41 -1.81 -1.49,-0.48 -1.48 -1.67,-0.37 -1.29 -1.35,-0.06 -1.5 -1.31,0.03 -1.45 -1.68,0.01 -1.07 -1.65,0.21 -1.07 -1.33,0.48 -1.28 -1.49,0.5 -1.16 -1.84,0.39 -0.8 -1.82,0.48 -0.69 -1.46,0.79 -0.9 -1.41,0.71 -1.13 -1.12,0.87 -1.29 -0.94,1.07 -1 -0.8,1.41 -1.06 -0.66,1.5 -1.1 -0.29,1.83 -0.92 -0.25,2.07 -0.98 0.04,2.24 -0.66 0.17,2.57 -0.76 0.31,2.73 -0.41 0.29,2.47 -0.25 0.52,2.49 -0.52 0.79,2.86 -0.56 0.8,3 -0.6 1.15,2.66 -0.7 1.3,2.47 -1.02 1.35,2.18 -0.9 1.13,2.12 -1.06 0.79,1.9 -0.83 0.58,1.71 -0.91 0.26,1.51 -0.66 0.05,1.2 -0.79 -0.13,1.24 -0.6 -0.46,0.9 -0.45 -0.55,1.1 -0.16 -0.68,1.17 -0.38 -0.98,0.8 -0.44 -1.06,0.67 -0.27 -1.37,0.57 0.08 -1.26,0.83 0.09 -0.99,0.61 0 -0.7,0.4 -0.29 -0.56,0.08 -0.11 -0.65,0.09 -0.28 -1,0.01 -0.62 -0.86,-0.34 -0.54 -0.73,-0.45 -0.3 -1.01,-0.4 -0.59 -1.26,-0.62 -0.81 -1.05,-0.88 -0.54 -1,-0.89 -0.46 -1.37,-0.95 -0.83 -1.44,-1.24 -0.82 -1.18,-1.39 -0.52 -1.36,-1.38 -0.71 -1.69,-1.53 -1.02 -1.52,-1.83 -0.81 -1.41,-1.86 -0.66 -1.75,-1.75 -0.31 -1.64,-1.58 -0.08 -1.9,-1.47 0.21 -1.69,-1.24 0.25 -1.4,-1.24 0.52 -1.13,-0.93 0.55 -0.9,-0.81 0.79 -0.64,-0.44 0.89 -0.6,-0.24 1.1 -0.35,0.12 1.12 -0.47,0.02 0.97 -0.81,0.16 0.62 -0.8,-0.18 0.45 -0.77,-0.31 0.68 -1.05,-0.02 0.57 -1.27,-0.07 0.2 -1.18,-0.45 0.23 -1.25,-0.38 0.4 -1.58,-0.13 0.14 -1.7,-0.35 -0.15 -1.61,-0.65 0.02 -1.78,-0.44 0.1 -2.1,-0.33 -0.27 -2.12,-0.67 -0.41 -2.06,-0.9 -0.18 -2.26,-1.07 0.01 -1.98,-1.15 0.38 -1.98,-0.98 0.52 -1.67,-1.05 0.84 -1.47,-0.85 0.94 -1.17,-0.93 1.18 -0.89,-0.65 1.36 -0.73,-0.65 1.65 -0.48,-0.56 1.97 -0.65,-0.27 2.03 -0.4,-0.14 1.69 -0.51,-0.19 1.76 -0.88,0.02 2.08 -0.84,0.31 1.89 -0.67,0.3 1.58 -0.89,0.33 1.7 -1.25,0.54 1.4 -1.36,0.28 1.15 -1.24,-0.01 1.35 -1.39,0.17 1.35 -1.73,0.23 0.98 -1.71,-0.14 0.91 -1.64,-0.23 1.13 -1.94,0.03 0.96 -2.17,-0.14 0.63 -2.08,-0.48 0.76 -2.18,-0.64 0.82 -1.84,-0.84 1.13 -1.75,-0.7 1.32 -1.44,-0.96 1.52 -1.25,-0.84 1.76 -0.98,-1.04 1.77 -0.66,-1.06 2.12 -0.49,-1.3 2.03 -0.21,-1.19 2.01 0.15,-0.82 1.98 0.19,-0.77 1.92 -0.18,-0.56 1.61 -0.1,-0.6 1.23 -0.09,-0.89 1.2 0.15,-1.08 1.45 -0.07" radius="0.05" material="color: grey" position="" rotation="" scale="" visible="" tube=""></a-tube>
+			<a-tube path="-1 1.25 -0.38,-1.13 0.94 -0.19,-1.46 1.12 -0.13,-1.49 1.23 -0.49,-1.42 0.88 -0.62,-1.7 0.75 -0.4,-1.93 1.04 -0.5,-1.88 0.95 -0.87,-1.92 0.57 -0.81,-2.25 0.65 -0.62,-2.39 0.75 -0.96,-2.18 0.54 -1.2,-2.15 0.2 -1.05,-2.35 0.03 -1.32,-2.07 0.1 -1.57,-1.77 0.18 -1.37,-1.56 -0.02 -1.12,-1.39 0.17 -0.84,-1.02 0.06 -0.83,-0.94 0.16 -0.47,-0.57 0.2 -0.41,-0.5 0.04 -0.07,-0.61 -0.23 0.17,-0.86 0 0.33,-1.21 0.13 0.25,-1.53 -0.07 0.28,-1.54 -0.45 0.25,-1.46 -0.61 0.03,-1.16 -0.39 -0.05,-0.93 -0.47 0.24,-0.97 -0.84 0.16,-0.94 -0.81 -0.22,-0.63 -0.59 -0.2,-0.46 -0.82 0.04,-0.53 -1.12 -0.18,-0.41 -0.94 -0.49,-0.08 -0.84 -0.31,-0.02 -1.17 -0.12,0.23 -1.29 -0.38,0.48 -1.06 -0.22,0.49 -1.26 0.1,0.44 -1.6 -0.08,0.75 -1.53 -0.3,0.95 -1.4 0,0.88 -1.72 0.19,0.99 -1.94 -0.09,1.3 -1.72 -0.16,1.41 -1.7 0.2,1.36 -2.08 0.25,1.57 -2.14 -0.06,1.85 -1.9 0.05,1.85 -1.95 0.43,1.67 -2.27 0.5,1.43 -2.1 0.75,1.18 -1.83 0.79,1.27 -1.47 0.88,1.28 -1.35 1.24,1.07 -1.06 1.12,0.93 -0.9 0.8,0.91 -0.52 0.8,0.7 -0.3 0.58,0.59 0.06 0.57,0.22 0.14 0.63,0.04 0.42 0.45,-0.3 0.26 0.38,-0.16 -0.1 0.44,-0.14 -0.28 0.1,0.23 -0.35 0.06,0.25 -0.45 0.43,-0.05 -0.68 0.43,0.08 -0.83 0.1,0.41 -0.91 0.27,0.25 -1.02 0.6,-0.04 -1.24 0.48,0.15 -1.56 0.4,0.33 -1.54 0.73,0.04 -1.47 0.96,0.01 -1.84 1.06,0.39 -1.87 1.11,0.38 -1.75 1.47,0.76 -1.73 1.5,0.77 -1.46 1.23,0.74 -1.11 1.35,0.52 -0.87 1.15,0.64 -0.51 1.19,0.45 -0.23 1.03,0.61 0.12 1.01,0.39 0.43 1,0.54 0.77 0.92,0.64 0.96 1.23,0.68 1.28 1.02,0.84 1.56 1.23,0.79 1.34 1.54,0.48 1.19 1.71,0.5 1.46 1.98,0.46 1.74 1.72,0.13 1.6 1.6,0.27 1.63 1.24,0.28 1.26 1.15,0.08 0.99 0.97,0.06 0.73 1.24,-0.31 0.68 1.31,-0.28 0.31 1.4,-0.07 0.38 1.71,-0.15 0.75 1.77,-0.5 0.81 1.63,-0.85 0.74 1.76,-1.1 0.49 1.61,-1.36 0.66 1.38,-1.58 0.58 1.08,-1.47 0.73 0.75,-1.4 0.61 0.39,-1.64 0.32 0.45,-1.47 0.17 0.74,-1.43 0.17 1.12,-1.06 0.21 1.18,-0.8 0.43 1.37,-0.81 0.78 1.21,-0.62 1.11 1.22,-0.91 1.33 1.35,-0.98 1.63 1.56,-1.13 1.6 1.91,-1.47 1.68 1.75,-1.45 1.42 1.49,-1.33 1.61 1.18,-1.09 1.41 0.96,-0.73 1.54 0.92,-0.45 1.48 0.68,-0.15 1.26 0.75,0.19 1.44 0.73,0.51 1.28 0.61,0.82 1.37 0.41,0.7 1.08 0.18,0.39 1.19 -0.01,0.28 0.83 -0.06,0.23 0.77 0.32,-0.06 1.02 0.32,-0.37 0.8 0.38,-0.51 0.95 0.7,-0.63 0.62 0.84,-0.51 0.26 0.8,-0.65 -0.07 0.68,-0.87 -0.25 0.93,-0.68 -0.58 0.92,-0.37 -0.4 1.05,-0.57 -0.24 1.34,-0.69 -0.59 1.41,-0.35 -0.77 1.39,-0.22 -0.5 1.63,-0.5 -0.54 1.88,-0.44 -0.92 1.92,-0.06 -0.87 1.93,0.01 -1.06 1.61,0.17 -0.76 1.44,0.36 -0.47 1.6,0.35 -0.12 1.47,0.62 0.15 1.51,0.69 0.48 1.35,1 0.63 1.18,1.06 1.01 1.14,1.13 1.2 0.83,1.5 1.23 0.93,1.53 0.85 1,1.37 0.78 0.66,1.61 1.01 0.48,1.91 0.86 0.65,1.79 0.51 0.54,1.75 0.64 0.18,2.1 0.78 0.17,2.24 0.46 0.33,2.08 0.23 0.07,2.19 0.44 -0.22,2.55 0.46 -0.1,2.6 0.1 0.02,2.38 -0.11 -0.21,2.34 0.11 -0.52" radius="0.05" material="color: grey" position="" rotation="" scale="" visible="" tube=""></a-tube>
+			<a-tube path="1.96 0.09 -0.48,1.75 0.41 -0.46,1.45 0.33 -0.25,1.12 0.51 -0.24,1.09 0.74 0.06,0.79 0.53 0.16,0.99 0.21 0.17,1.28 0.4 0.34,1.06 0.41 0.65,1.07 0.02 0.66,1.44 0.02 0.59,1.5 0.27 0.86,1.33 0.06 1.12,1.54 -0.25 1.02,1.85 -0.03 1.05,1.75 0.06 1.4,1.68 -0.3 1.49,2.03 -0.38 1.38,2.21 -0.08 1.53,2.04 -0.09 1.87,2.14 -0.45 1.93,2.43 -0.52 1.69,2.52 -0.86 1.84,2.15 -0.99 1.82,2.13 -1.26 1.56,1.84 -1.17 1.34,1.72 -1.25 0.99,1.51 -0.97 0.85,1.32 -0.89 0.54,1.23 -0.54 0.44,0.96 -0.5 0.18,1.12 -0.25 -0.06,0.78 -0.14 -0.19,0.91 0.1 -0.46,1.2 0.27 -0.63,1.3 0.63 -0.53,1.38 0.8 -0.86,1.06 1 -0.8,1.21 1.12 -0.47,1.55 1.25 -0.59,1.43 1.61 -0.63,1.28 1.6 -0.28,1.59 1.46 -0.12,1.82 1.69 -0.32,1.63 1.99 -0.2,1.64 1.89 0.16,2.01 1.81 0.16" radius="0.05" material="color: grey" position="" rotation="" scale="" visible="" tube=""></a-tube>
+<a-sphere id="THR_2" position="-2.67 -1.09 0.33" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_3" position="-2.09 -1.02 0.32" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_4" position="-1.97 -1.44 0.01" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_5" position="-1.59 -1.27 0.27" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_6" position="-1.57 -1.22 0.8" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_7" position="-1.77 -0.69 0.63" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_8" position="-1.56 -0.73 1.1" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_9" position="-1 -0.74 1.07" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_10" position="-1.23 -0.8 1.5" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_11" position="-1.35 -0.37 1.68" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_12" position="-1.08 -0.29 1.25" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_13" position="-1.36 -0.29 0.89" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_14" position="-1.72 -0.3 0.78" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_15" position="-2 -0.25 0.42" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_16" position="-1.92 0.28 0.71" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_17" position="-2.07 0.28 0.13" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_18" position="-2.44 0.63 0.07" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_19" position="-2.85 0.26 0.13" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_20" position="-2.69 0.46 -0.35" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_21" position="-2.22 0.24 -0.25" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_22" position="-2.52 -0.18 -0.01" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_23" position="-2.64 -0.3 -0.53" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_24" position="-2.14 -0.11 -0.63" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_25" position="-1.99 -0.33 -0.16" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_26" position="-2.35 -0.72 -0.26" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_27" position="-2.19 -0.66 -0.77" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_28" position="-1.71 -0.57 -0.58" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_29" position="-1.82 -0.94 -0.21" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_30" position="-2.09 -1.21 -0.58" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_31" position="-1.72 -1.04 -0.93" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_32" position="-1.38 -1.09 -0.52" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_33" position="-1.64 -1.53 -0.37" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_34" position="-1.71 -1.61 -0.89" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_35" position="-1.23 -1.39 -0.97" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_36" position="-1.08 -1.65 -0.53" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_37" position="-1.34 -2.08 -0.71" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_38" position="-1.24 -1.87 -1.21" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_39" position="-0.86 -2.3 -1.31" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_40" position="-1 -1.93 -1.7" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_41" position="-1 -1.57 -1.3" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_42" position="-0.59 -1.85 -1.09" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_43" position="-0.43 -1.94 -1.6" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_44" position="-0.6 -1.43 -1.71" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_45" position="-0.44 -1.3 -1.23" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_46" position="-0.05 -1.66 -1.29" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_47" position="-0.04 -1.51 -1.81" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_48" position="-0.11 -1 -1.62" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_49" position="0.18 -1.16 -1.21" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_50" position="0.48 -1.44 -1.53" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_51" position="0.44 -1.26 -1.96" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_52" position="0.24 -0.78 -1.84" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_53" position="0.39 -0.72 -1.35" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_54" position="0.8 -0.91 -1.42" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_55" position="0.58 -1.17 -1.07" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_56" position="0.93 -1.43 -0.88" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_57" position="1.02 -0.89 -0.74" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_58" position="1.55 -1 -0.72" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_59" position="1.46 -1.23 -0.22" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_60" position="1.85 -0.79 -0.31" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_61" position="2.17 -1.11 0.05" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="CYS_62" position="2.15 -0.56 0.22" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_63" position="2.68 -0.87 0.24" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_64" position="2.75 -0.33 0.17" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_65" position="2.33 -0.24 0.47" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_66" position="2.41 -0.66 0.77" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_67" position="2.97 -0.5 0.7" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_68" position="3.01 -0.61 1.14" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_69" position="2.55 -0.62 1.27" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_70" position="2.47 -1.1 1.48" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_71" position="2.13 -0.76 1.12" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_72" position="2.12 -1.22 0.76" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_73" position="1.94 -0.69 0.59" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_74" position="1.65 -1.05 0.23" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_75" position="1.58 -0.55 -0.02" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_76" position="1.07 -0.84 -0.08" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_77" position="1.36 -0.65 -0.56" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_78" position="0.79 -0.44 -0.46" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_79" position="1.23 -0.11 -0.62" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_80" position="1.28 -0.51 -0.98" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_81" position="0.7 -0.46 -0.96" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_82" position="0.59 -0.35 -1.48" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_83" position="0.57 0.07 -1.27" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_84" position="0.84 0.08 -1" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_85" position="0.54 0.11 -0.66" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_86" position="0.41 -0.34 -0.42" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_87" position="0.06 0.02 -0.68" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_88" position="0.22 -0.3 -1.09" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_89" position="0.06 -0.7 -0.74" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_90" position="-0.36 -0.51 -0.6" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_91" position="-0.38 -0.18 -1.07" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_92" position="-0.26 -0.68 -1.3" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_93" position="-0.61 -0.82 -1.05" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_94" position="-0.87 -0.42 -0.92" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_95" position="-0.76 -0.42 -1.46" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_96" position="-0.86 -0.96 -1.43" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_97" position="-1.23 -0.79 -1.04" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_98" position="-1.31 -0.4 -1.39" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_99" position="-1.25 -0.75 -1.77" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_100" position="-1.47 -1.1 -1.4" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_101" position="-1.82 -0.72 -1.3" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_102" position="-1.86 -0.67 -1.76" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_103" position="-1.7 -0.28 -1.51" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_104" position="-1.66 -0.06 -2.04" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_105" position="-1.56 0.31 -1.7" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_106" position="-1.08 0.19 -1.43" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_107" position="-1.35 0.54 -1.05" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_108" position="-0.8 0.48 -0.96" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_109" position="-0.85 0.79 -0.5" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_110" position="-0.36 0.86 -0.73" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_111" position="-0.23 1.09 -0.36" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_112" position="0.24 1.04 -0.4" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_113" position="0.02 0.96 -0.81" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_114" position="0.26 0.53 -0.71" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_115" position="-0.27 0.44 -0.66" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_116" position="-0.3 0.66 -1.06" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_117" position="0.14 0.58 -1.26" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_118" position="-0.05 0.13 -1.05" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_119" position="-0.54 0.3 -1.18" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_120" position="-0.31 0.52 -1.61" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_121" position="0.02 0.11 -1.66" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_122" position="-0.4 -0.2 -1.48" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_123" position="-0.7 0.14 -1.74" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_124" position="-0.31 0.16 -2.11" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_125" position="-0.24 -0.35 -2.02" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_126" position="-0.69 -0.48 -1.92" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_127" position="-0.89 -0.2 -2.27" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_128" position="-1.04 -0.05 -1.84" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_129" position="-1.27 0.43 -2.04" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="CYS_130" position="-0.83 0.47 -1.66" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_131" position="-1.18 0.89 -1.49" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_132" position="-0.69 0.91 -1.2" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_133" position="-1.05 1.14 -0.81" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_134" position="-0.53 1.35 -0.84" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_135" position="-0.65 1.63 -0.49" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_136" position="-0.65 2.08 -0.67" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_137" position="-0.27 2.03 -0.26" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_138" position="-0.19 1.55 -0.48" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_139" position="-0.31 1.8 -0.95" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_140" position="-0.01 2.19 -0.76" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_141" position="0.32 1.86 -0.53" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_142" position="0.22 1.46 -0.84" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_143" position="0.4 1.82 -1.3" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_144" position="0.67 1.36 -1.29" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_145" position="0.26 1.09 -1.11" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_146" position="-0.04 1.48 -1.36" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_147" position="0.31 1.41 -1.77" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_148" position="0.31 0.88 -1.6" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_149" position="-0.21 0.96 -1.53" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_150" position="-0.22 1.27 -1.96" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_151" position="0.18 0.92 -2.15" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_152" position="-0.11 0.54 -1.95" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_153" position="-0.48 0.75 -2.19" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_154" position="-0.57 0.76 -1.71" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_155" position="-0.99 1.13 -1.77" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_156" position="-0.55 1.34 -1.44" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_157" position="-1.09 1.44 -1.24" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_158" position="-0.78 1.89 -1.03" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_159" position="-1.05 1.63 -0.59" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_160" position="-1.1 2.22 -0.58" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_161" position="-1.41 1.92 -0.22" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_162" position="-1.19 2 0.15" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_163" position="-0.74 1.89 0.29" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_164" position="-0.72 2.04 -0.25" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_165" position="-0.46 1.6 0.01" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_166" position="-0.49 1.12 -0.04" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_167" position="-0.9 1.23 0.29" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_168" position="-1.03 1.58 -0.09" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_169" position="-0.85 1.21 -0.44" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="CYS_170" position="-1.08 0.88 -0.06" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_171" position="-1.48 1.24 -0.06" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_172" position="-1.39 1.31 -0.57" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_173" position="-1.3 0.78 -0.6" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_174" position="-1.69 0.73 -0.25" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_175" position="-1.89 1.18 -0.51" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_176" position="-1.73 0.94 -0.94" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TRP_177" position="-1.82 0.47 -0.72" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_178" position="-2.26 0.74 -0.52" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_179" position="-2.38 0.74 -0.97" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_180" position="-2.04 0.6 -1.26" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_181" position="-2.19 0.14 -0.91" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_182" position="-2.48 0.05 -1.39" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_183" position="-2.09 0.19 -1.69" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_184" position="-1.73 0.31 -1.34" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_185" position="-1.47 -0.15 -1.17" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_186" position="-1.46 0.21 -0.72" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_187" position="-0.93 0.05 -0.96" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_188" position="-1.02 0.09 -0.36" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_189" position="-0.56 0.18 -0.41" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_190" position="-0.44 0.14 0.02" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_191" position="-0.51 -0.35 0.22" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_192" position="-0.79 0.11 0.37" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_193" position="-1.2 0.12 0.24" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_194" position="-1.65 -0.02 0.2" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_195" position="-1.61 -0.55 0.34" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_196" position="-1.49 -0.73 -0.09" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_197" position="-1.15 -0.25 -0.09" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_198" position="-0.97 -0.45 0.38" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_199" position="-1.1 -0.93 0.17" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_200" position="-1.02 -0.74 -0.32" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_201" position="-0.62 -0.45 -0.16" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_202" position="-0.51 -0.89 0.17" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_203" position="-0.66 -1.2 -0.21" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_204" position="-0.49 -0.86 -0.58" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_205" position="-0.07 -0.73 -0.22" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_206" position="-0.12 -1.27 -0.07" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_207" position="0.23 -1.3 -0.53" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_208" position="0.46 -0.93 -0.17" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_209" position="0.5 -1.28 0.09" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_210" position="0.34 -1.64 -0.19" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_211" position="0.77 -1.44 -0.41" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_212" position="0.91 -1.3 0.09" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_213" position="0.75 -1.79 0.23" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_214" position="0.93 -1.97 -0.23" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_215" position="1.3 -1.59 -0.22" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_216" position="1.36 -1.63 0.31" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_217" position="1.24 -2.17 0.23" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_218" position="1.55 -2.1 -0.21" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_219" position="1.85 -1.76 0.02" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_220" position="1.81 -1.84 0.5" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_221" position="1.67 -2.28 0.49" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_222" position="1.52 -2.1 0.87" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_223" position="1.05 -1.86 0.85" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_224" position="1.21 -1.37 0.79" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_225" position="1.4 -1.31 1.31" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_226" position="1.1 -0.94 1.2" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_227" position="0.84 -0.99 0.7" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_228" position="1.05 -0.47 0.84" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_229" position="0.6 -0.4 0.51" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="CYS_230" position="0.65 0.16 0.47" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_231" position="0.17 0.07 0.76" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_232" position="0.04 0.41 0.45" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_233" position="-0.29 0.24 0.38" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_234" position="-0.16 -0.11 0.43" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_235" position="-0.19 -0.24 -0.04" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_236" position="0.35 -0.27 0.02" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_237" position="0.24 -0.37 0.55" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_238" position="-0.19 -0.67 0.43" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_239" position="0.09 -0.84 0.09" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_240" position="0.52 -0.82 0.31" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_241" position="0.18 -0.95 0.69" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_242" position="-0.12 -1.23 0.35" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_243" position="0.24 -1.6 0.27" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_244" position="0.46 -1.46 0.74" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_245" position="-0.1 -1.43 0.92" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_246" position="-0.06 -1.96 0.97" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_247" position="0.5 -1.85 0.99" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_248" position="0.32 -1.85 1.58" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_249" position="0.87 -1.85 1.47" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_250" position="0.74 -1.5 1.07" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_251" position="0.75 -1.12 1.35" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_252" position="0.39 -0.92 1.11" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_253" position="0.79 -0.5 1.22" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_254" position="0.45 -0.24 1.02" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_255" position="0.76 0.11 0.95" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_256" position="0.29 0.44 1.09" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_257" position="0.49 0.83 0.79" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_258" position="0.64 0.95 1.22" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_259" position="0.68 1.27 1.02" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_260" position="0.81 1.69 1.23" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_261" position="0.8 1.33 1.53" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_262" position="0.48 1.05 1.78" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_263" position="0.62 1.46 2.07" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_264" position="0.56 1.75 1.6" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_265" position="0.14 1.59 1.59" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_266" position="0.37 1.74 1.2" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_267" position="0.31 1.17 1.27" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_268" position="0.09 0.98 0.96" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_269" position="0.18 0.71 1.33" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_270" position="-0.41 0.68 1.19" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_271" position="-0.2 0.19 1.32" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_272" position="0.08 0.34 1.71" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_273" position="-0.02 0.83 1.73" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_274" position="-0.5 0.8 1.63" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_275" position="-0.91 0.85 1.81" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_276" position="-1.15 0.35 1.67" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_277" position="-1.35 0.64 1.37" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_278" position="-1.72 0.54 1.11" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_279" position="-1.37 0.83 0.78" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_280" position="-1.24 0.6 0.37" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_281" position="-1.63 0.31 0.44" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_282" position="-1.33 0.1 0.69" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_283" position="-1.51 0.08 1.21" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_284" position="-0.99 0.19 1.03" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_285" position="-0.66 0.36 1.4" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_286" position="-0.95 0.83 1.2" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_287" position="-0.52 1.16 1.1" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_288" position="-1.03 1.23 1.36" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_289" position="-1.04 1.75 1.51" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_290" position="-1.1 1.68 2.03" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_291" position="-1.48 1.81 1.67" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_292" position="-1.44 1.4 1.48" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_293" position="-1.3 1.75 1.16" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_294" position="-1.11 1.31 0.83" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_295" position="-0.66 1.56 1.05" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_296" position="-0.37 1.58 0.59" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_297" position="-0.12 1.1 0.71" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_298" position="0.24 1.55 0.81" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_299" position="0.5 1.12 0.56" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_300" position="0.97 1.34 0.44" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_301" position="0.73 0.93 0.21" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_302" position="0.4 1.26 -0.14" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_303" position="0.28 0.82 -0.06" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_304" position="0.35 0.73 0.41" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_305" position="-0.07 1.1 0.19" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_306" position="-0.38 0.64 0.32" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_307" position="-0.59 1.06 0.67" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_308" position="-0.77 0.58 0.8" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_309" position="-0.41 0.22 0.92" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_310" position="-0.64 -0.09 0.67" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_311" position="-1.01 -0.29 0.89" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_312" position="-0.64 -0.68 0.79" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_313" position="-0.29 -0.29 0.98" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_314" position="-0.68 -0.16 1.32" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_315" position="-0.77 -0.69 1.31" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_316" position="-0.25 -0.79 1.26" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_317" position="-0.22 -0.36 1.6" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_318" position="-0.64 -0.53 1.84" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_319" position="-0.49 -1.04 1.82" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_320" position="-0.05 -0.88 1.93" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_321" position="-0.08 -1.14 1.51" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_322" position="0.12 -0.72 1.3" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_323" position="0.5 -0.52 1.66" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="TYR_324" position="0.21 -0.08 1.42" color="green" radius="0.32" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_325" position="0.77 0.08 1.51" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_326" position="0.62 0.59 1.39" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_327" position="1.06 0.53 1.06" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_328" position="1.14 1.08 1.23" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_329" position="1.11 1.34 0.8" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_330" position="1.57 1.3 1.04" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_331" position="1.46 0.77 1.1" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_332" position="1.24 0.8 0.61" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_333" position="1.63 1.15 0.5" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_334" position="1.95 0.84 0.79" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_335" position="1.67 0.43 0.57" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_336" position="1.67 0.75 0.14" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_337" position="2.16 0.88 0.25" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_338" position="2.21 0.4 0.46" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_339" position="1.94 0.18 0.05" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="CYS_340" position="2.18 0.58 -0.25" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_341" position="2.6 0.53 0.01" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_342" position="2.59 0.06 0.17" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_343" position="2.27 -0.19 -0.15" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_344" position="2.34 0.1 -0.53" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_345" position="1.9 -0.04 -0.42" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_346" position="1.75 0.51 -0.58" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_347" position="1.49 0.28 -0.11" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_348" position="0.99 0.44 -0.27" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_349" position="1.07 0.88 0.06" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_350" position="0.68 0.46 0.07" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_351" position="1.06 0.14 0.03" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_352" position="1.33 0.53 0.29" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_353" position="0.92 0.44 0.65" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_354" position="1.01 -0.08 0.56" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_355" position="1.52 0.06 0.46" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_356" position="1.44 0.4 0.87" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_357" position="1.19 0.01 1.13" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ALA_358" position="1.55 -0.32 0.88" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_359" position="1.89 0.08 0.97" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_360" position="1.63 0.13 1.43" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_361" position="1.6 -0.42 1.41" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="MET_362" position="2.08 -0.38 1.23" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_363" position="2.21 0.05 1.47" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_364" position="1.9 -0.08 1.89" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_365" position="2.03 -0.54 1.96" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PRO_366" position="2.55 -0.44 1.67" color="grey" radius="0.2" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_367" position="2.62 -0.89 1.95" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_368" position="2.04 -0.91 1.84" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLU_369" position="2.17 -1.42 1.57" color="red" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLN_370" position="1.78 -1.06 1.39" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_371" position="1.71 -1.41 0.94" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_372" position="1.56 -0.84 0.9" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_373" position="1.24 -1.01 0.46" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_374" position="1.33 -0.43 0.44" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASN_375" position="0.81 -0.52 0.19" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_376" position="1.26 -0.27 -0.14" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="SER_377" position="0.68 -0.09 -0.1" color="red" radius="0.23" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_378" position="0.92 0.09 -0.46" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ARG_379" position="1.26 0.23 -0.78" color="blue" radius="0.33" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="GLY_380" position="1.31 0.61 -0.54" color="green" radius="0.17" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_381" position="1.37 0.72 -1" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LYS_382" position="0.93 0.92 -0.77" color="blue" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_383" position="1.22 1.01 -0.36" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_384" position="1.63 1.19 -0.72" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="PHE_385" position="1.33 1.64 -0.73" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="THR_386" position="1.18 1.49 -0.23" color="green" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="VAL_387" position="1.65 1.3 -0.15" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="HIS_388" position="1.83 1.69 -0.48" color="green" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ASP_389" position="1.49 2.02 -0.24" color="red" radius="0.25" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="ILE_390" position="1.59 1.75 0.22" color="grey" radius="0.35" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+<a-sphere id="LEU_391" position="2.08 1.68 0.08" color="grey" radius="0.3" transparent="true" opacity="0" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+		</a-marker>
+
+        <!-- Connecting charged atoms-->
+        <a-sphere id="linker10" radius="0.3" color="green" connector="src: #LEU_58; dest: #LEU_174; alpha: 0.05" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker11" radius="0.3" color="green" connector="src: #LEU_58; dest: #LEU_174; alpha: 0.1" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker12" radius="0.3" color="green" connector="src: #LEU_58; dest: #LEU_174; alpha: 0.2" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker13" radius="0.3" color="green" connector="src: #LEU_58; dest: #LEU_174; alpha: 0.3" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker14" radius="0.3" color="green" connector="src: #LEU_58; dest: #LEU_174; alpha: 0.4" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker15" radius="0.3" color="green" connector="src: #LEU_58; dest: #LEU_174; alpha: 0.5" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker16" radius="0.3" color="green" connector="src: #LEU_58; dest: #LEU_174; alpha: 0.6" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker17" radius="0.3" color="green" connector="src: #LEU_58; dest: #LEU_174; alpha: 0.7" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker18" radius="0.3" color="green" connector="src: #LEU_58; dest: #LEU_174; alpha: 0.8" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker19" radius="0.3" color="green" connector="src: #LEU_58; dest: #LEU_174; alpha: 0.9" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker110" radius="0.3" color="green" connector="src: #LEU_58; dest: #LEU_174; alpha: 0.95" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+
+        <a-sphere id="linker20" radius="0.3" color="green" connector="src: #ASN_108; dest: #ARG_275; alpha: 0.05" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker21" radius="0.3" color="green" connector="src: #ASN_108; dest: #ARG_275; alpha: 0.1" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker22" radius="0.3" color="green" connector="src: #ASN_108; dest: #ARG_275; alpha: 0.2" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker23" radius="0.3" color="green" connector="src: #ASN_108; dest: #ARG_275; alpha: 0.3" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker24" radius="0.3" color="green" connector="src: #ASN_108; dest: #ARG_275; alpha: 0.4" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker25" radius="0.3" color="green" connector="src: #ASN_108; dest: #ARG_275; alpha: 0.5" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker26" radius="0.3" color="green" connector="src: #ASN_108; dest: #ARG_275; alpha: 0.6" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker27" radius="0.3" color="green" connector="src: #ASN_108; dest: #ARG_275; alpha: 0.7" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker28" radius="0.3" color="green" connector="src: #ASN_108; dest: #ARG_275; alpha: 0.8" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker29" radius="0.3" color="green" connector="src: #ASN_108; dest: #ARG_275; alpha: 0.9" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker210" radius="0.3" color="green" connector="src: #ASN_108; dest: #ARG_275; alpha: 0.95" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+
+        <a-sphere id="linker30" radius="0.3" color="olive" connector="src: #ALA_103; dest: #ILE_278; alpha: 0.05" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker31" radius="0.3" color="olive" connector="src: #ALA_103; dest: #ILE_278; alpha: 0.1" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker32" radius="0.3" color="olive" connector="src: #ALA_103; dest: #ILE_278; alpha: 0.2" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker33" radius="0.3" color="olive" connector="src: #ALA_103; dest: #ILE_278; alpha: 0.3" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker34" radius="0.3" color="olive" connector="src: #ALA_103; dest: #ILE_278; alpha: 0.4" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker35" radius="0.3" color="olive" connector="src: #ALA_103; dest: #ILE_278; alpha: 0.5" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker36" radius="0.3" color="olive" connector="src: #ALA_103; dest: #ILE_278; alpha: 0.6" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker37" radius="0.3" color="olive" connector="src: #ALA_103; dest: #ILE_278; alpha: 0.7" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker38" radius="0.3" color="olive" connector="src: #ALA_103; dest: #ILE_278; alpha: 0.8" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker39" radius="0.3" color="olive" connector="src: #ALA_103; dest: #ILE_278; alpha: 0.9" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker310" radius="0.3" color="olive" connector="src: #ALA_103; dest: #ILE_278; alpha: 0.95" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+
+        <a-sphere id="linker40" radius="0.3" color="red" connector="src: #LEU_58; dest: #TYR_197; alpha: 0.05" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker41" radius="0.3" color="red" connector="src: #LEU_58; dest: #TYR_197; alpha: 0.1" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker42" radius="0.3" color="red" connector="src: #LEU_58; dest: #TYR_197; alpha: 0.2" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker43" radius="0.3" color="red" connector="src: #LEU_58; dest: #TYR_197; alpha: 0.3" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker44" radius="0.3" color="red" connector="src: #LEU_58; dest: #TYR_197; alpha: 0.4" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker45" radius="0.3" color="red" connector="src: #LEU_58; dest: #TYR_197; alpha: 0.5" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker46" radius="0.3" color="red" connector="src: #LEU_58; dest: #TYR_197; alpha: 0.6" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker47" radius="0.3" color="red" connector="src: #LEU_58; dest: #TYR_197; alpha: 0.7" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker48" radius="0.3" color="red" connector="src: #LEU_58; dest: #TYR_197; alpha: 0.8" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker49" radius="0.3" color="red" connector="src: #LEU_58; dest: #TYR_197; alpha: 0.9" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker410" radius="0.3" color="red" connector="src: #LEU_58; dest: #TYR_197; alpha: 0.95" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+
+		<a-sphere id="linker50" radius="0.21104286916741888" color="red" connector="src: #ILE_214; dest: #VAL_139; alpha: 0.05" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker51" radius="0.21104286916741888" color="red" connector="src: #ILE_214; dest: #VAL_139; alpha: 0.1" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker52" radius="0.21104286916741888" color="red" connector="src: #ILE_214; dest: #VAL_139; alpha: 0.2" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker53" radius="0.21104286916741888" color="red" connector="src: #ILE_214; dest: #VAL_139; alpha: 0.3" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker54" radius="0.21104286916741888" color="red" connector="src: #ILE_214; dest: #VAL_139; alpha: 0.4" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker55" radius="0.21104286916741888" color="red" connector="src: #ILE_214; dest: #VAL_139; alpha: 0.5" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker56" radius="0.21104286916741888" color="red" connector="src: #ILE_214; dest: #VAL_139; alpha: 0.6" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker57" radius="0.21104286916741888" color="red" connector="src: #ILE_214; dest: #VAL_139; alpha: 0.7" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker58" radius="0.21104286916741888" color="red" connector="src: #ILE_214; dest: #VAL_139; alpha: 0.8" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker59" radius="0.21104286916741888" color="red" connector="src: #ILE_214; dest: #VAL_139; alpha: 0.9" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere id="linker510" radius="0.21104286916741888" color="red" connector="src: #ILE_214; dest: #VAL_139; alpha: 0.95" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+
+		<!-- add a simple camera -->
+  	    <a-entity camera="" position="" rotation="" scale="" visible=""></a-entity>
+	<canvas class="a-canvas" data-aframe-canvas="true" width="1365" height="1024" style="width: 1525px; height: 1144px;"></canvas><div class="a-enter-vr embedded" aframe-injected="" style="position: fixed;"><button class="a-enter-vr-button" aframe-injected=""></button></div><div class="a-orientation-modal a-hidden" aframe-injected=""><button aframe-injected="">Exit VR</button></div><a-entity light="" data-aframe-default-light="" aframe-injected="" position="" rotation="" scale="" visible=""></a-entity><a-entity light="" position="" data-aframe-default-light="" aframe-injected="" rotation="" scale="" visible=""></a-entity></a-scene>    
+
+
+<script type="text/javascript">
+// var radio = 0.05+0.45*(distancia-8)
+// if (radio>0.5) {radio=0.5}
+    setInterval(function(){
+      document.getElementById("thescene").object3D.updateMatrixWorld();
+
+      var p1 = new THREE.Vector3(); p1.setFromMatrixPosition(document.getElementById("LEU_58").object3D.matrixWorld);
+      var p2 = new THREE.Vector3(); p2.setFromMatrixPosition(document.getElementById("LEU_174").object3D.matrixWorld);
+      distancia = 10 * Math.sqrt( Math.pow(p2.x-p1.x,2) + Math.pow(p2.y-p1.y,2) + Math.pow(p2.z-p1.z,2) )
+      var radio = 0.05+0.25*(distancia-10)/10
+      if (radio>0.3) {radio=0.3}
+      if (radio<0.05) {radio=0.05}
+      for (i=0;i<11;i++) { document.getElementById("linker1"+i).setAttribute('radius',radio) }
+      
+      var p2 = new THREE.Vector3(); p2.setFromMatrixPosition(document.getElementById("TYR_197").object3D.matrixWorld);
+      distancia = 10 * Math.sqrt( Math.pow(p2.x-p1.x,2) + Math.pow(p2.y-p1.y,2) + Math.pow(p2.z-p1.z,2) )
+      var radio = 0.05+0.25*(distancia-10)/10
+      if (radio>0.3) {radio=0.3}
+      if (radio<0.05) {radio=0.05}
+      for (i=0;i<11;i++) { document.getElementById("linker4"+i).setAttribute('radius',radio) }
+      
+      var p1 = new THREE.Vector3(); p1.setFromMatrixPosition(document.getElementById("ASN_108").object3D.matrixWorld);
+      var p2 = new THREE.Vector3(); p2.setFromMatrixPosition(document.getElementById("ARG_275").object3D.matrixWorld);
+      distancia = 10 * Math.sqrt( Math.pow(p2.x-p1.x,2) + Math.pow(p2.y-p1.y,2) + Math.pow(p2.z-p1.z,2) )
+      var radio = 0.05+0.25*(distancia-10)/10
+      if (radio>0.3) {radio=0.3}
+      if (radio<0.05) {radio=0.05}
+      for (i=0;i<11;i++) { document.getElementById("linker2"+i).setAttribute('radius',radio) }
+      
+      var p1 = new THREE.Vector3(); p1.setFromMatrixPosition(document.getElementById("ALA_103").object3D.matrixWorld);
+      var p2 = new THREE.Vector3(); p2.setFromMatrixPosition(document.getElementById("ILE_278").object3D.matrixWorld);
+      distancia = 10 * Math.sqrt( Math.pow(p2.x-p1.x,2) + Math.pow(p2.y-p1.y,2) + Math.pow(p2.z-p1.z,2) )
+      var radio = 0.05+0.25*(distancia-10)/10
+      if (radio>0.3) {radio=0.3}
+      if (radio<0.05) {radio=0.05}
+      for (i=0;i<11;i++) { document.getElementById("linker3"+i).setAttribute('radius',radio) }
+
+      var p1 = new THREE.Vector3(); p1.setFromMatrixPosition(document.getElementById("ILE_214").object3D.matrixWorld);
+      var p2 = new THREE.Vector3(); p2.setFromMatrixPosition(document.getElementById("VAL_139").object3D.matrixWorld);
+      distancia = 10 * Math.sqrt( Math.pow(p2.x-p1.x,2) + Math.pow(p2.y-p1.y,2) + Math.pow(p2.z-p1.z,2) )
+      var radio = 0.05+0.25*(distancia-10)/10
+      if (radio>0.3) {radio=0.3}
+      if (radio<0.05) {radio=0.05}
+      for (i=0;i<11;i++) { document.getElementById("linker5"+i).setAttribute('radius',radio) }
+
+    },200)
+        
+</script>
+
+<div id="arjsDebugUIContainer" style="position: fixed; bottom: 10px; width:100%; text-align: center; z-index: 1;color: grey;"><div style="color: rgba(0, 0, 0, 0.9); background-color: rgba(127, 127, 127, 0.5); display: inline-block; padding: 0.5em; margin: 0.5em; text-align: left;"><span style="display: block;"><b>trackingBackend</b> : artoolkit</span><a style="display: block;" target="_blank" href="https://webxr.io/augmented-website?https://lucianoabriata.altervista.org/jsinscience/arjs/armodeling/coevol_1qop.html">Share on augmented-websites</a></div><div style="color: rgba(0, 0, 0, 0.9); background-color: rgba(127, 127, 127, 0.5); display: inline-block; padding: 0.5em; margin: 0.5em; text-align: left;"><span style="display: block;"><b>markersAreaEnabled</b> :false</span></div><div style="color: rgba(0, 0, 0, 0.9); background-color: rgba(127, 127, 127, 0.5); display: inline-block; padding: 0.5em; margin: 0.5em; text-align: left;"><span style="display: block;"><b>markersAreaEnabled</b> :false</span></div></div><video autoplay="autoplay" muted="muted" playsinline="" style="width: 1525px; height: 1143.75px; position: absolute; top: 0px; left: 0px; z-index: -2; margin-left: 0px; margin-top: -229.375px;"></video></body></html>

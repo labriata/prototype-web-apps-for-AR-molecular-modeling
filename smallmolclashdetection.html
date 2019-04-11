@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--script src="../aframe.min.js"></script-->
+<!--script src="../aframe-ar.js"></script-->
+<html class=""><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><meta aframe-injected="" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui"><meta aframe-injected="" name="mobile-web-app-capable" content="yes"><meta aframe-injected="" name="theme-color" content="black"><script src="smallmolclashdetection_files/aframe.js"></script><style type="text/css" data-href="src\style\aframe.css">.a-html{bottom:0;left:0;position:fixed;right:0;top:0}.a-body{height:100%;margin:0;overflow:hidden;padding:0;width:100%}:-webkit-full-screen{background-color:transparent}.a-hidden{display:none!important}.a-canvas{height:100%;left:0;position:absolute;top:0;width:100%}.a-canvas.a-grab-cursor:hover{cursor:grab;cursor:-moz-grab;cursor:-webkit-grab}.a-canvas.a-grab-cursor:active,.a-grabbing{cursor:grabbing;cursor:-moz-grabbing;cursor:-webkit-grabbing}// Class is removed when doing <a-scene embedded>. a-scene.fullscreen .a-canvas{width:100%!important;height:100%!important;top:0!important;left:0!important;right:0!important;bottom:0!important;z-index:999999!important;position:fixed!important}.a-inspector-loader{background-color:#ed3160;position:fixed;left:3px;top:3px;padding:6px 10px;color:#fff;text-decoration:none;font-size:12px;font-family:Roboto,sans-serif;text-align:center;z-index:99999;width:204px}@keyframes dots-1{from{opacity:0}25%{opacity:1}}@keyframes dots-2{from{opacity:0}50%{opacity:1}}@keyframes dots-3{from{opacity:0}75%{opacity:1}}@-webkit-keyframes dots-1{from{opacity:0}25%{opacity:1}}@-webkit-keyframes dots-2{from{opacity:0}50%{opacity:1}}@-webkit-keyframes dots-3{from{opacity:0}75%{opacity:1}}.a-inspector-loader .dots span{animation:dots-1 2s infinite steps(1);-webkit-animation:dots-1 2s infinite steps(1)}.a-inspector-loader .dots span:first-child+span{animation-name:dots-2;-webkit-animation-name:dots-2}.a-inspector-loader .dots span:first-child+span+span{animation-name:dots-3;-webkit-animation-name:dots-3}a-scene{display:block;position:relative;height:100%;width:100%}a-assets,a-scene audio,a-scene img,a-scene video{display:none}.a-enter-vr-modal,.a-orientation-modal{font-family:Consolas,Andale Mono,Courier New,monospace}.a-enter-vr-modal a{border-bottom:1px solid #fff;padding:2px 0;text-decoration:none;transition:.1s color ease-in}.a-enter-vr-modal a:hover{background-color:#fff;color:#111;padding:2px 4px;position:relative;left:-4px}.a-enter-vr{font-family:sans-serif,monospace;font-size:13px;width:100%;font-weight:200;line-height:16px;position:absolute;right:20px;bottom:20px}.a-enter-vr.embedded{right:5px;bottom:5px}.a-enter-vr-button,.a-enter-vr-modal,.a-enter-vr-modal a{color:#fff}.a-enter-vr-button{background:url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20245.82%20141.73%22%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill%3A%23fff%3Bfill-rule%3Aevenodd%3B%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Ctitle%3Emask%3C%2Ftitle%3E%3Cpath%20class%3D%22a%22%20d%3D%22M175.56%2C111.37c-22.52%2C0-40.77-18.84-40.77-42.07S153%2C27.24%2C175.56%2C27.24s40.77%2C18.84%2C40.77%2C42.07S198.08%2C111.37%2C175.56%2C111.37ZM26.84%2C69.31c0-23.23%2C18.25-42.07%2C40.77-42.07s40.77%2C18.84%2C40.77%2C42.07-18.26%2C42.07-40.77%2C42.07S26.84%2C92.54%2C26.84%2C69.31ZM27.27%2C0C11.54%2C0%2C0%2C12.34%2C0%2C28.58V110.9c0%2C16.24%2C11.54%2C30.83%2C27.27%2C30.83H99.57c2.17%2C0%2C4.19-1.83%2C5.4-3.7L116.47%2C118a8%2C8%2C0%2C0%2C1%2C12.52-.18l11.51%2C20.34c1.2%2C1.86%2C3.22%2C3.61%2C5.39%2C3.61h72.29c15.74%2C0%2C27.63-14.6%2C27.63-30.83V28.58C245.82%2C12.34%2C233.93%2C0%2C218.19%2C0H27.27Z%22%2F%3E%3C%2Fsvg%3E) 50% 50%/70% 70% no-repeat rgba(0,0,0,.35);border:0;bottom:0;cursor:pointer;min-width:50px;min-height:30px;padding-right:5%;padding-top:4%;position:absolute;right:0;transition:background-color .05s ease;-webkit-transition:background-color .05s ease;z-index:9999}.a-enter-vr-button:active,.a-enter-vr-button:hover{background-color:#666}[data-a-enter-vr-no-webvr] .a-enter-vr-button{border-color:#666;opacity:.65}[data-a-enter-vr-no-webvr] .a-enter-vr-button:active,[data-a-enter-vr-no-webvr] .a-enter-vr-button:hover{background-color:rgba(0,0,0,.35);cursor:not-allowed}.a-enter-vr-modal{background-color:#666;border-radius:0;display:none;min-height:32px;margin-right:70px;padding:9px;width:280px;right:2%;position:absolute}.a-enter-vr-modal:after{border-bottom:10px solid transparent;border-left:10px solid #666;border-top:10px solid transparent;display:inline-block;content:'';position:absolute;right:-5px;top:5px;width:0;height:0}.a-enter-vr-modal a,.a-enter-vr-modal p{display:inline}.a-enter-vr-modal p{margin:0}.a-enter-vr-modal p:after{content:' '}[data-a-enter-vr-no-headset].a-enter-vr:hover .a-enter-vr-modal,[data-a-enter-vr-no-webvr].a-enter-vr:hover .a-enter-vr-modal{display:block}.a-orientation-modal{background:url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20version%3D%221.1%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2090%2090%22%20enable-background%3D%22new%200%200%2090%2090%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpolygon%20points%3D%220%2C0%200%2C0%200%2C0%20%22%3E%3C/polygon%3E%3Cg%3E%3Cpath%20d%3D%22M71.545%2C48.145h-31.98V20.743c0-2.627-2.138-4.765-4.765-4.765H18.456c-2.628%2C0-4.767%2C2.138-4.767%2C4.765v42.789%20%20%20c0%2C2.628%2C2.138%2C4.766%2C4.767%2C4.766h5.535v0.959c0%2C2.628%2C2.138%2C4.765%2C4.766%2C4.765h42.788c2.628%2C0%2C4.766-2.137%2C4.766-4.765V52.914%20%20%20C76.311%2C50.284%2C74.173%2C48.145%2C71.545%2C48.145z%20M18.455%2C16.935h16.344c2.1%2C0%2C3.808%2C1.708%2C3.808%2C3.808v27.401H37.25V22.636%20%20%20c0-0.264-0.215-0.478-0.479-0.478H16.482c-0.264%2C0-0.479%2C0.214-0.479%2C0.478v36.585c0%2C0.264%2C0.215%2C0.478%2C0.479%2C0.478h7.507v7.644%20%20%20h-5.534c-2.101%2C0-3.81-1.709-3.81-3.81V20.743C14.645%2C18.643%2C16.354%2C16.935%2C18.455%2C16.935z%20M16.96%2C23.116h19.331v25.031h-7.535%20%20%20c-2.628%2C0-4.766%2C2.139-4.766%2C4.768v5.828h-7.03V23.116z%20M71.545%2C73.064H28.757c-2.101%2C0-3.81-1.708-3.81-3.808V52.914%20%20%20c0-2.102%2C1.709-3.812%2C3.81-3.812h42.788c2.1%2C0%2C3.809%2C1.71%2C3.809%2C3.812v16.343C75.354%2C71.356%2C73.645%2C73.064%2C71.545%2C73.064z%22%3E%3C/path%3E%3Cpath%20d%3D%22M28.919%2C58.424c-1.466%2C0-2.659%2C1.193-2.659%2C2.66c0%2C1.466%2C1.193%2C2.658%2C2.659%2C2.658c1.468%2C0%2C2.662-1.192%2C2.662-2.658%20%20%20C31.581%2C59.617%2C30.387%2C58.424%2C28.919%2C58.424z%20M28.919%2C62.786c-0.939%2C0-1.703-0.764-1.703-1.702c0-0.939%2C0.764-1.704%2C1.703-1.704%20%20%20c0.94%2C0%2C1.705%2C0.765%2C1.705%2C1.704C30.623%2C62.022%2C29.858%2C62.786%2C28.919%2C62.786z%22%3E%3C/path%3E%3Cpath%20d%3D%22M69.654%2C50.461H33.069c-0.264%2C0-0.479%2C0.215-0.479%2C0.479v20.288c0%2C0.264%2C0.215%2C0.478%2C0.479%2C0.478h36.585%20%20%20c0.263%2C0%2C0.477-0.214%2C0.477-0.478V50.939C70.131%2C50.676%2C69.917%2C50.461%2C69.654%2C50.461z%20M69.174%2C51.417V70.75H33.548V51.417H69.174z%22%3E%3C/path%3E%3Cpath%20d%3D%22M45.201%2C30.296c6.651%2C0%2C12.233%2C5.351%2C12.551%2C11.977l-3.033-2.638c-0.193-0.165-0.507-0.142-0.675%2C0.048%20%20%20c-0.174%2C0.198-0.153%2C0.501%2C0.045%2C0.676l3.883%2C3.375c0.09%2C0.075%2C0.198%2C0.115%2C0.312%2C0.115c0.141%2C0%2C0.273-0.061%2C0.362-0.166%20%20%20l3.371-3.877c0.173-0.2%2C0.151-0.502-0.047-0.675c-0.194-0.166-0.508-0.144-0.676%2C0.048l-2.592%2C2.979%20%20%20c-0.18-3.417-1.629-6.605-4.099-9.001c-2.538-2.461-5.877-3.817-9.404-3.817c-0.264%2C0-0.479%2C0.215-0.479%2C0.479%20%20%20C44.72%2C30.083%2C44.936%2C30.296%2C45.201%2C30.296z%22%3E%3C/path%3E%3C/g%3E%3C/svg%3E) center/50% 50% no-repeat rgba(244,244,244,1);bottom:0;font-size:14px;font-weight:600;left:0;line-height:20px;right:0;position:fixed;top:0;z-index:9999999}.a-orientation-modal:after{color:#666;content:"Insert phone into Cardboard holder.";display:block;position:absolute;text-align:center;top:70%;transform:translateY(-70%);width:100%}.a-orientation-modal button{background:url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20version%3D%221.1%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20100%20100%22%20enable-background%3D%22new%200%200%20100%20100%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M55.209%2C50l17.803-17.803c1.416-1.416%2C1.416-3.713%2C0-5.129c-1.416-1.417-3.713-1.417-5.129%2C0L50.08%2C44.872%20%20L32.278%2C27.069c-1.416-1.417-3.714-1.417-5.129%2C0c-1.417%2C1.416-1.417%2C3.713%2C0%2C5.129L44.951%2C50L27.149%2C67.803%20%20c-1.417%2C1.416-1.417%2C3.713%2C0%2C5.129c0.708%2C0.708%2C1.636%2C1.062%2C2.564%2C1.062c0.928%2C0%2C1.856-0.354%2C2.564-1.062L50.08%2C55.13l17.803%2C17.802%20%20c0.708%2C0.708%2C1.637%2C1.062%2C2.564%2C1.062s1.856-0.354%2C2.564-1.062c1.416-1.416%2C1.416-3.713%2C0-5.129L55.209%2C50z%22%3E%3C/path%3E%3C/svg%3E) no-repeat;border:none;height:50px;text-indent:-9999px;width:50px}</style><style type="text/css" data-href="src\style\rStats.css">.rs-base{background-color:#333;color:#fafafa;border-radius:0;font:10px monospace;left:5px;line-height:1em;opacity:.85;overflow:hidden;padding:10px;position:fixed;top:5px;width:300px;z-index:10000}.rs-base div.hidden{display:none}.rs-base h1{color:#fff;cursor:pointer;font-size:1.4em;font-weight:300;margin:0 0 5px;padding:0}.rs-group{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-flex-direction:column-reverse;flex-direction:column-reverse;margin-bottom:5px}.rs-group:last-child{margin-bottom:0}.rs-counter-base{align-items:center;display:-webkit-box;display:-webkit-flex;display:flex;height:10px;-webkit-justify-content:space-between;justify-content:space-between;margin:2px 0}.rs-counter-base.alarm{color:#b70000;text-shadow:0 0 0 #b70000,0 0 1px #fff,0 0 1px #fff,0 0 2px #fff,0 0 2px #fff,0 0 3px #fff,0 0 3px #fff,0 0 4px #fff,0 0 4px #fff}.rs-counter-id{font-weight:300;-webkit-box-ordinal-group:0;-webkit-order:0;order:0;width:54px}.rs-counter-value{font-weight:300;-webkit-box-ordinal-group:1;-webkit-order:1;order:1;text-align:right;width:35px}.rs-canvas{-webkit-box-ordinal-group:2;-webkit-order:2;order:2}@media (min-width:480px){.rs-base{left:20px;top:20px}}</style>
+<script src="smallmolclashdetection_files/aframe-ar.js"> </script>
+<script src="smallmolclashdetection_files/client.js"></script>
+  
+
+</head><body style="margin: -229.375px 0px 0px; overflow: hidden; font-family: monospace; width: 1525px; height: 1143.75px;" class="">
+<style>
+  canvas  {	-moz-transform: scale(-1, 1);	-webkit-transform: scale(-1, 1);	-o-transform: scale(-1, 1);	-ms-transform: scale(-1, 1);	transform: scale(-1, 1);  }
+  video  {	-moz-transform: scale(-1, 1);	-webkit-transform: scale(-1, 1);	-o-transform: scale(-1, 1);	-ms-transform: scale(-1, 1);	transform: scale(-1, 1);  }
+</style>
+<div style="position: fixed; top: 10px; width:inherit; text-align: center; z-index: 1; background-color: rgba(255, 255, 255, 0.6);">
+  <font size="4">
+  <p align="left"><a href="https://clustrmaps.com/site/16ven" title="Visit tracker" target="_blank"><img src="smallmolclashdetection_files/map_v2.png" alt="" width="1%" height="1%"></a><b>Two small molecules with clash detection (<a href="https://lucianoabriata.altervista.org/jsinscience/arjs/armodeling/markers.docx" download="">get markers here</a>)</b></p>
+  <p align="center"></p><h2>CLICK SCREEN TO START -- AND CHECK YOUR AD BLOCKER</h2><p></p>
+  </font>
+  <font size="4" color="red"><p id="infop" align="left"><p align="left">N-O1 distance: 2.6430478268213653 &#8491;<br>N-O2 distance: 1.5813925581545314 &#8491;<br>Electrostatics: -0.5430211933205755</p></p></font>
+</div>
+<div style="position: fixed; top: 0px; right:0px; width:400; text-align: right; z-index: 1; background-color: rgba(255, 255, 255, 0);">
+  <font size="4">
+  <p align="right"><a href="" target="_blank"><b>[Open in new window]</b></a></p>
+  </font>
+</div>
+
+	<a-scene embedded="" artoolkit="sourceType: webcam;" id="thescene" class="" canvas="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+		<!-- handle hiro marker-->
+		<a-marker preset="hiro" id="lysmarker" position="" rotation="" scale="" visible="" material="" arjs-anchor="" arjs-hit-testing="">
+          <!-- This is a lysine side chain, starting from the CA atom, which is set to the origin
+          All coordinates have been divided by 2,
+          so any distance between two atoms must be multiplied by 2 to get the actual distance-->
+          <a-sphere id="lys1" position="0.000   0.000   0.000" color="grey" radius="0.4" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys2" position="-0.6035  -0.3175  -0.347" color="grey" radius="0.4" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys3" position="-1.2480  -0.037  -0.0455" color="grey" radius="0.4" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys4" position="-1.851  -0.3545  -0.3925" color="grey" radius="0.4" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys5" position="-2.496  -0.0745  -0.0905" color="grey" radius="0.4" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys6" position="-3.075  -0.3795  -0.4235" color="blue" radius="0.4" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys7" position="-0.5875 -0.2035 -0.88" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys8" position="-0.5895 -0.858 -0.2765" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys9" position="-1.264 -0.1515 0.4875" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys10" position="-1.2615 0.503 -0.1155" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys11" position="-1.8355 -0.2405 -0.925" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys12" position="-1.8375 -0.895 -0.322" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys13" position="-2.5115 -0.1885 0.442" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys14" position="-2.5095 0.466 -0.161" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys15" position="-3.057 -0.8825 -0.3935" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys16" position="-3.507 -0.202 -0.233" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys17" position="-2.9455  -0.524  -0.89" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          
+          <a-sphere id="lys18" position="0.000   0.000   0.000" color="grey" radius="0.6" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys19" position="-0.6035  -0.3175  -0.347" color="grey" radius="0.6" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys20" position="-1.2480  -0.037  -0.0455" color="grey" radius="0.6" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys21" position="-1.851  -0.3545  -0.3925" color="grey" radius="0.6" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys22" position="-2.496  -0.0745  -0.0905" color="grey" radius="0.6" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys23" position="-3.075  -0.3795  -0.4235" color="blue" radius="0.6" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys24" position="-0.5875 -0.2035 -0.88" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys25" position="-0.5895 -0.858 -0.2765" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys26" position="-1.264 -0.1515 0.4875" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys27" position="-1.2615 0.503 -0.1155" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys28" position="-1.8355 -0.2405 -0.925" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys29" position="-1.8375 -0.895 -0.322" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys30" position="-2.5115 -0.1885 0.442" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys31" position="-2.5095 0.466 -0.161" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys32" position="-3.057 -0.8825 -0.3935" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys33" position="-3.507 -0.202 -0.233" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="lys34" position="-2.9455  -0.524  -0.89" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+		</a-marker>
+		
+		<!-- handle kanji marker -->
+		<a-marker preset="kanji" id="glumarker" position="" rotation="" scale="" visible="" material="" arjs-anchor="" arjs-hit-testing="">
+          <!-- This is a glutamate side chain, starting from the CA atom, which is set to the origin-->
+          <a-sphere id="glu1" position="0.000   0.000   0.000" color="grey" radius="0.4" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu2" position="-0.6365 -0.3515 -0.238" color="grey" radius="0.4" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu3" position="-1.2485 0.0445 -0.006" color="grey" radius="0.4" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu4" position="-1.8755 -0.3015 -0.2405" color="grey" radius="0.4" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu5" position="-1.836 -0.8175 -0.563" color="red" radius="0.4" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu6" position="-2.4215 -0.066 -0.1075" color="red" radius="0.4" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu7" position="-0.635 -0.381 -0.7825" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu8" position="-0.6555 -0.854 -0.0285" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu9" position="-1.25 0.0745 0.538" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu10" position="-1.2295 0.5475 -0.2155" color="white" radius="0.2" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+
+          <a-sphere id="glu11" position="0.000   0.000   0.000" color="grey" radius="0.6" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu12" position="-0.6365 -0.3515 -0.238" color="grey" radius="0.6" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu13" position="-1.2485 0.0445 -0.006" color="grey" radius="0.6" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu14" position="-1.8755 -0.3015 -0.2405" color="grey" radius="0.6" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu15" position="-1.836 -0.8175 -0.563" color="red" radius="0.6" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu16" position="-2.4215 -0.066 -0.1075" color="red" radius="0.6" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu17" position="-0.635 -0.381 -0.7825" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu18" position="-0.6555 -0.854 -0.0285" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu19" position="-1.25 0.0745 0.538" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+          <a-sphere id="glu20" position="-1.2295 0.5475 -0.2155" color="white" radius="0.4" transparent="true" opacity="0.5" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+		</a-marker>
+
+        <!-- Connecting charged atoms -->
+        <a-sphere radius="0.05" color="yellow" connector="src: #lys6; dest: #glu5; alpha: 0.1" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.05" color="yellow" connector="src: #lys6; dest: #glu5; alpha: 0.2" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.05" color="yellow" connector="src: #lys6; dest: #glu5; alpha: 0.3" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.05" color="yellow" connector="src: #lys6; dest: #glu5; alpha: 0.4" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.05" color="yellow" connector="src: #lys6; dest: #glu5; alpha: 0.5" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.05" color="yellow" connector="src: #lys6; dest: #glu5; alpha: 0.6" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.05" color="yellow" connector="src: #lys6; dest: #glu5; alpha: 0.7" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.05" color="yellow" connector="src: #lys6; dest: #glu5; alpha: 0.8" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+        <a-sphere radius="0.05" color="yellow" connector="src: #lys6; dest: #glu5; alpha: 0.9" position="" rotation="" scale="" visible="" material="" geometry=""></a-sphere>
+      
+		<!-- add a simple camera -->
+  	    <a-entity camera="" position="" rotation="" scale="" visible=""></a-entity>
+	<canvas class="a-canvas" data-aframe-canvas="true" width="1365" height="1024" style="width: 1525px; height: 1144px;"></canvas><div class="a-enter-vr embedded" aframe-injected="" style="position: fixed;"><button class="a-enter-vr-button" aframe-injected=""></button></div><div class="a-orientation-modal a-hidden" aframe-injected=""><button aframe-injected="">Exit VR</button></div><a-entity light="" data-aframe-default-light="" aframe-injected="" position="" rotation="" scale="" visible=""></a-entity><a-entity light="" position="" data-aframe-default-light="" aframe-injected="" rotation="" scale="" visible=""></a-entity></a-scene>
+
+
+<script type="text/javascript">
+	var lysopaq = new Array(17)
+    var gluopaq = new Array(10)
+    
+    setInterval(function(){
+		document.getElementById("thescene").object3D.updateMatrixWorld();
+        var p1 = new THREE.Vector3(); p1.setFromMatrixPosition(document.getElementById("lys6").object3D.matrixWorld);
+        var p2 = new THREE.Vector3(); p2.setFromMatrixPosition(document.getElementById("glu5").object3D.matrixWorld);
+        var p3 = new THREE.Vector3(); p3.setFromMatrixPosition(document.getElementById("glu6").object3D.matrixWorld);
+		distNO1 = 2 * Math.sqrt( Math.pow(p2.x-p1.x,2) + Math.pow(p2.y-p1.y,2) + Math.pow(p2.z-p1.z,2) )        
+		distNO2 = 2 * Math.sqrt( Math.pow(p3.x-p1.x,2) + Math.pow(p3.y-p1.y,2) + Math.pow(p3.z-p1.z,2) )        
+		document.getElementById("infop").innerHTML="<p align='left'>N-O1 distance: " + distNO1 + " &#8491<br>N-O2 distance: " + distNO2 + " &#8491<br>Electrostatics: " + (-1/distNO1/distNO1 - 1/distNO2/distNO2) + "</p>";        
+        
+        for (i=0;i<17;i++) {lysopaq[i]=0}
+        for (i=0;i<10;i++) {gluopaq[i]=0}
+          
+        for (i=1;i<18;i++) {
+          var p1 = new THREE.Vector3(); p1.setFromMatrixPosition(document.getElementById("lys"+i).object3D.matrixWorld);
+          for (j=1;j<11;j++) {
+            var p2 = new THREE.Vector3(); p2.setFromMatrixPosition(document.getElementById("glu"+j).object3D.matrixWorld);
+            distancia = 2 * Math.sqrt( Math.pow(p2.x-p1.x,2) + Math.pow(p2.y-p1.y,2) + Math.pow(p2.z-p1.z,2) );
+            if (distancia < 3) {
+              lysopaq[i-1]=0.5
+              gluopaq[j-1]=0.5
+            }
+          }
+        }
+
+		for (i=18;i<35;i++) { document.getElementById("lys"+i).setAttribute('opacity',lysopaq[i-18])}
+        for (i=11;i<21;i++) { document.getElementById("glu"+i).setAttribute('opacity',gluopaq[i-11])}
+
+    }, 200);
+</script>
+
+
+<div id="arjsDebugUIContainer" style="position: fixed; bottom: 10px; width:100%; text-align: center; z-index: 1;color: grey;"><div style="color: rgba(0, 0, 0, 0.9); background-color: rgba(127, 127, 127, 0.5); display: inline-block; padding: 0.5em; margin: 0.5em; text-align: left;"><span style="display: block;"><b>trackingBackend</b> : artoolkit</span><a style="display: block;" target="_blank" href="https://webxr.io/augmented-website?https://lucianoabriata.altervista.org/jsinscience/arjs/armodeling/smallmolclashdetection.html">Share on augmented-websites</a></div><div style="color: rgba(0, 0, 0, 0.9); background-color: rgba(127, 127, 127, 0.5); display: inline-block; padding: 0.5em; margin: 0.5em; text-align: left;"><span style="display: block;"><b>markersAreaEnabled</b> :false</span></div><div style="color: rgba(0, 0, 0, 0.9); background-color: rgba(127, 127, 127, 0.5); display: inline-block; padding: 0.5em; margin: 0.5em; text-align: left;"><span style="display: block;"><b>markersAreaEnabled</b> :false</span></div></div><video autoplay="autoplay" muted="muted" playsinline="" style="width: 1525px; height: 1143.75px; position: absolute; top: 0px; left: 0px; z-index: -2; margin-left: 0px; margin-top: -229.375px;"></video></body></html>
